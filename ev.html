@@ -1,0 +1,6180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="ZynGen Enterprises – Battery Manufacturing, EV Batteries and Electric Mobility Solutions.">
+
+<title>ZynGen Enterprises | Battery & EV Manufacturing</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7faf8;
+    color:#14231a;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+/* =========================================================
+   PREMIUM ZYNGEN LOADER
+========================================================= */
+
+#zyngen-loader{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:10000;
+
+    background:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+}
+
+
+/* Loader content */
+
+.loader-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    animation:loaderContentIn 1s ease forwards;
+}
+
+
+/* Logo */
+
+.loader-logo{
+
+    width:110px;
+
+    height:110px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin-bottom:18px;
+
+    animation:
+        loaderLogoIn 1s ease,
+        loaderLogoFloat 3s ease-in-out 1s infinite;
+
+}
+
+
+/* Company name */
+
+.loader-company{
+
+    color:#132219;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    text-align:center;
+
+    line-height:1;
+
+}
+
+
+/* Enterprises */
+
+.loader-company span{
+
+    display:block;
+
+    color:#24643a;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:5px;
+
+    margin-top:9px;
+
+}
+
+
+/* Small loading line */
+
+.loader-line{
+
+    width:120px;
+
+    height:2px;
+
+    margin-top:25px;
+
+    background:#e3ece5;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.loader-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-100%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:#24643a;
+
+    animation:loaderLine 1.5s ease-in-out infinite;
+}
+
+
+/* Loader animations */
+
+@keyframes loaderContentIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px) scale(.97);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+@keyframes loaderLogoIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.75);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes loaderLogoFloat{
+
+    0%,
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+@keyframes loaderLine{
+
+    0%{
+
+        left:-100%;
+
+    }
+
+    50%{
+
+        left:0;
+
+    }
+
+    100%{
+
+        left:100%;
+
+    }
+
+}
+
+
+/* Hide loader */
+
+#zyngen-loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+
+    --green:#24643a;
+    --green-dark:#123b22;
+    --green-deep:#0d2d1a;
+    --green-light:#e7f3ea;
+    --green-soft:#f1f8f3;
+    --lime:#91c94a;
+
+    --white:#ffffff;
+    --black:#14231a;
+
+    --text:#53635a;
+    --muted:#77837c;
+
+    --border:#dce7df;
+
+    --shadow:0 25px 70px rgba(24,62,37,.10);
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+
+    height:78px;
+
+    padding:0 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:rgba(255,255,255,.96);
+
+    border-bottom:1px solid var(--border);
+
+    position:sticky;
+    top:0;
+
+    z-index:999;
+
+    backdrop-filter:blur(12px);
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+    gap:13px;
+
+    min-width:max-content;
+}
+
+.logo img{
+
+    width:50px;
+    height:50px;
+
+    display:block;
+
+    object-fit:contain;
+}
+
+.brand-name{
+
+    display:flex;
+    flex-direction:column;
+
+    line-height:1;
+}
+
+.brand-name strong{
+
+    color:#132219;
+
+    font-size:21px;
+
+    font-weight:900;
+
+    letter-spacing:1.4px;
+}
+
+.brand-name small{
+
+    margin-top:6px;
+
+    color:var(--green);
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:2.8px;
+}
+
+.nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:26px;
+}
+
+.nav a{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#59665e;
+
+    transition:.2s ease;
+}
+
+.nav a:hover{
+
+    color:var(--green);
+}
+
+.nav-enquiry{
+
+    padding:11px 20px;
+
+    border-radius:30px;
+
+    background:var(--green);
+
+    color:#fff !important;
+
+    box-shadow:0 8px 20px rgba(36,100,58,.18);
+}
+
+.nav-enquiry:hover{
+
+    background:var(--green-dark);
+
+    transform:translateY(-1px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    min-height:calc(100vh - 78px);
+
+    padding:65px 6%;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 8% 20%,
+            rgba(88,161,102,.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(145,201,74,.10),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #eef7f0,
+            #ffffff 65%
+        );
+}
+
+
+/* Technical background */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(36,100,58,.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(36,100,58,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:45px 45px;
+
+    pointer-events:none;
+}
+
+.hero-container{
+
+    width:100%;
+
+    max-width:1180px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:55px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.hero-tag{
+
+    display:inline-flex;
+
+    padding:9px 16px;
+
+    border-radius:30px;
+
+    background:#e2f0e5;
+
+    color:var(--green);
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1.4px;
+
+    margin-bottom:23px;
+}
+
+.hero h1{
+
+    font-size:clamp(48px,6vw,76px);
+
+    line-height:.96;
+
+    letter-spacing:-4px;
+
+    margin-bottom:25px;
+
+    max-width:800px;
+}
+
+.hero h1 span{
+
+    color:var(--green);
+
+    display:block;
+}
+
+.hero p{
+
+    max-width:670px;
+
+    color:#627168;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 23px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    transition:.25s ease;
+}
+
+.btn-primary{
+
+    background:var(--green);
+
+    color:#fff;
+
+    box-shadow:0 12px 25px rgba(36,100,58,.18);
+}
+
+.btn-primary:hover{
+
+    background:var(--green-dark);
+
+    transform:translateY(-2px);
+}
+
+.btn-secondary{
+
+    background:#fff;
+
+    border:1px solid #d2dfd5;
+
+    color:#31543c;
+}
+
+.btn-secondary:hover{
+
+    border-color:var(--green);
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO BATTERY MANUFACTURING VISUAL
+========================================================= */
+
+.battery-visual{
+
+    min-height:480px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+}
+
+
+/* Outer technical rings */
+
+.energy-ring{
+
+    position:absolute;
+
+    width:410px;
+
+    height:410px;
+
+    border:1px solid rgba(36,100,58,.12);
+
+    border-radius:50%;
+
+    animation:rotateRing 18s linear infinite;
+}
+
+.energy-ring::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:9px;
+
+    height:9px;
+
+    border-radius:50%;
+
+    background:var(--lime);
+
+    top:15px;
+
+    left:50%;
+
+    box-shadow:0 0 20px rgba(145,201,74,.7);
+}
+
+.energy-ring-two{
+
+    width:330px;
+    height:330px;
+
+    border-style:dashed;
+
+    animation:rotateRingReverse 12s linear infinite;
+}
+
+@keyframes rotateRing{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes rotateRingReverse{
+
+    from{
+        transform:rotate(360deg);
+    }
+
+    to{
+        transform:rotate(0deg);
+    }
+}
+
+
+/* Main battery */
+
+.battery{
+
+    width:285px;
+
+    height:165px;
+
+    border-radius:29px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #347b49,
+            #1d5b34
+        );
+
+    box-shadow:
+
+        0 30px 80px rgba(30,87,48,.30),
+
+        inset 0 1px 0 rgba(255,255,255,.22);
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    animation:batteryFloat 3.5s ease-in-out infinite;
+
+    z-index:5;
+}
+
+@keyframes batteryFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+
+/* Battery positive terminal */
+
+.battery::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:22px;
+
+    height:62px;
+
+    background:#28683d;
+
+    right:-20px;
+
+    top:51px;
+
+    border-radius:0 9px 9px 0;
+
+    box-shadow:8px 0 20px rgba(36,100,58,.18);
+}
+
+
+/* Battery inner border */
+
+.battery-inner{
+
+    width:242px;
+
+    height:120px;
+
+    border:2px solid rgba(255,255,255,.26);
+
+    border-radius:20px;
+
+    padding:17px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    position:relative;
+}
+
+
+/* Charging cells */
+
+.cell{
+
+    width:34px;
+
+    height:78px;
+
+    border-radius:9px;
+
+    background:#dcefe1;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        inset 0 0 0 1px rgba(255,255,255,.45);
+
+}
+
+
+/* Green charging fill */
+
+.cell::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:0%;
+
+    background:
+
+        linear-gradient(
+            to top,
+            #a7d957,
+            #68ad55
+        );
+
+    border-radius:8px;
+
+    animation:chargeCell 2.8s ease-in-out infinite;
+}
+
+
+/* Cell sequence */
+
+.cell:nth-child(1)::after{
+
+    animation-delay:0s;
+}
+
+.cell:nth-child(2)::after{
+
+    animation-delay:.25s;
+}
+
+.cell:nth-child(3)::after{
+
+    animation-delay:.5s;
+}
+
+.cell:nth-child(4)::after{
+
+    animation-delay:.75s;
+}
+
+.cell:nth-child(5)::after{
+
+    animation-delay:1s;
+}
+
+
+@keyframes chargeCell{
+
+    0%{
+        height:0%;
+    }
+
+    35%{
+        height:90%;
+    }
+
+    55%{
+        height:90%;
+    }
+
+    100%{
+        height:0%;
+    }
+}
+
+
+/* Charging bolt */
+
+.charging-bolt{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    color:#fff;
+
+    font-size:34px;
+
+    font-weight:900;
+
+    text-shadow:0 0 18px rgba(255,255,255,.65);
+
+    animation:boltPulse 1.5s ease-in-out infinite;
+
+    z-index:8;
+}
+
+@keyframes boltPulse{
+
+    0%,
+    100%{
+        opacity:.45;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.85);
+    }
+
+    50%{
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            scale(1.05);
+    }
+}
+
+
+/* Energy pulse */
+
+.energy-pulse{
+
+    position:absolute;
+
+    width:340px;
+
+    height:210px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(145,201,74,.35);
+
+    animation:pulseEnergy 2.2s ease-out infinite;
+
+    z-index:1;
+}
+
+@keyframes pulseEnergy{
+
+    0%{
+        opacity:.8;
+        transform:scale(.75);
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(1.35);
+    }
+}
+
+
+/* Floating cards */
+
+.energy-card{
+
+    position:absolute;
+
+    background:#fff;
+
+    border:1px solid #dce7df;
+
+    border-radius:17px;
+
+    padding:16px 19px;
+
+    box-shadow:
+
+        0 20px 45px rgba(36,70,45,.12);
+
+    z-index:10;
+
+    animation:cardFloat 4s ease-in-out infinite;
+}
+
+@keyframes cardFloat{
+
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+}
+
+.energy-card strong{
+
+    display:block;
+
+    font-size:14px;
+
+    margin-bottom:5px;
+
+    color:#17261d;
+}
+
+.energy-card span{
+
+    color:#78857c;
+
+    font-size:10px;
+}
+
+.energy-one{
+
+    top:25px;
+
+    right:5px;
+
+    animation-delay:.6s;
+}
+
+.energy-two{
+
+    bottom:35px;
+
+    left:5px;
+
+    animation-delay:1.2s;
+}
+
+
+/* Manufacturing mini label */
+
+.manufacturing-label{
+
+    position:absolute;
+
+    bottom:5px;
+
+    right:15px;
+
+    padding:10px 15px;
+
+    border-radius:30px;
+
+    background:#173a24;
+
+    color:#dcefdc;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:1.1px;
+
+    box-shadow:0 12px 30px rgba(20,60,33,.18);
+}
+
+
+/* =========================================================
+   INFO STRIP
+========================================================= */
+
+.strip{
+
+    background:#fff;
+
+    border-top:1px solid var(--border);
+
+    border-bottom:1px solid var(--border);
+
+    padding:24px 6%;
+}
+
+.strip-inner{
+
+    max-width:1180px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+}
+
+.strip-item{
+
+    padding:10px 18px;
+
+    border-right:1px solid #e5ebe6;
+}
+
+.strip-item:last-child{
+
+    border-right:0;
+}
+
+.strip-item strong{
+
+    display:block;
+
+    font-size:13px;
+
+    margin-bottom:5px;
+
+    color:#203127;
+}
+
+.strip-item span{
+
+    color:#7b877f;
+
+    font-size:10px;
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.container{
+
+    max-width:1180px;
+
+    margin:auto;
+}
+
+.products,
+.battery-details,
+.why{
+
+    padding:105px 6%;
+}
+
+.section-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    align-items:end;
+
+    margin-bottom:50px;
+}
+
+.eyebrow{
+
+    color:#5e8767;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1.6px;
+
+    margin-bottom:13px;
+}
+
+.title{
+
+    font-size:47px;
+
+    line-height:1.03;
+
+    letter-spacing:-2.5px;
+}
+
+.title span{
+
+    color:var(--green);
+}
+
+.description{
+
+    max-width:440px;
+
+    color:#718078;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.product-card{
+
+    background:#fff;
+
+    border:1px solid #dfe8e1;
+
+    border-radius:24px;
+
+    padding:25px;
+
+    min-height:420px;
+
+    transition:.3s ease;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.product-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:linear-gradient(
+        90deg,
+        var(--green),
+        var(--lime)
+    );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.3s ease;
+}
+
+.product-card:hover::before{
+
+    transform:scaleX(1);
+}
+
+.product-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+
+        0 25px 60px rgba(39,69,45,.11);
+}
+
+.product-number{
+
+    color:#8aa08f;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:.7px;
+}
+
+.product-image{
+
+    width:100%;
+
+    height:190px;
+
+    border-radius:17px;
+
+    overflow:hidden;
+
+    background:#edf5ef;
+
+    margin:18px 0 20px;
+
+    border:1px solid #e0e8e1;
+}
+
+.product-image img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:.4s ease;
+}
+
+.product-card:hover .product-image img{
+
+    transform:scale(1.04);
+}
+
+.product-image .image-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#719078;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.product-card h3{
+
+    font-size:21px;
+
+    margin-bottom:11px;
+}
+
+.product-card p{
+
+    color:#748078;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   WHATSAPP / ENQUIRY
+========================================================= */
+
+.battery-enquiry{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    margin-top:16px;
+
+    padding:11px 17px;
+
+    border-radius:24px;
+
+    background:var(--green);
+
+    color:#fff !important;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    transition:.25s ease;
+
+    box-shadow:0 8px 18px rgba(49,95,60,.16);
+}
+
+.battery-enquiry:hover{
+
+    background:var(--green-dark);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 24px rgba(49,95,60,.22);
+}
+
+.battery-enquiry.whatsapp::before{
+
+    content:'\260E';
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   BATTERY DETAILS
+========================================================= */
+
+.battery-details{
+
+    background:#fff;
+
+    border-top:1px solid #e5ebe6;
+}
+
+.chemistry-section{
+
+    margin-top:75px;
+}
+
+.chemistry-section:first-child{
+
+    margin-top:0;
+}
+
+.chemistry-kicker{
+
+    color:#5d8a64;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
+    text-transform:uppercase;
+}
+
+.chemistry-kicker::before{
+
+    content:"";
+
+    display:inline-block;
+
+    width:17px;
+
+    height:2px;
+
+    background:var(--lime);
+
+    vertical-align:middle;
+
+    margin-right:8px;
+}
+
+.chemistry-title{
+
+    color:#173022;
+
+    font-size:clamp(34px,4vw,52px);
+
+    line-height:1.02;
+
+    letter-spacing:-2px;
+
+    margin-bottom:8px;
+}
+
+.chemistry-title span{
+
+    display:block;
+
+    color:#6b796f;
+
+    font-size:22px;
+
+    letter-spacing:-.4px;
+
+    margin-top:10px;
+}
+
+.chemistry-intro{
+
+    max-width:760px;
+
+    color:#68766e;
+
+    font-size:13px;
+
+    line-height:1.75;
+
+    margin-bottom:25px;
+}
+
+.chemistry-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
+}
+
+.chemistry-card{
+
+    background:#f7faf8;
+
+    border:1px solid #dfe8e1;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(25,65,38,.05);
+}
+
+.chemistry-card-head{
+
+    padding:15px 16px;
+
+    background:linear-gradient(
+        135deg,
+        #dcefdc,
+        #eff8ed
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    color:#183522;
+}
+
+.chemistry-card-head small{
+
+    font-size:8px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+.chemistry-card-head strong{
+
+    font-size:17px;
+}
+
+.capacity-head{
+
+    background:#183b25;
+
+    color:#fff;
+
+    padding:9px 14px;
+
+    font-size:8px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+.capacity-list{
+
+    display:grid;
+}
+
+.capacity-row{
+
+    padding:12px 14px;
+
+    border-bottom:1px solid #e5ebe6;
+
+    color:#193122;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    background:#fff;
+}
+
+.capacity-row:last-child{
+
+    border-bottom:0;
+}
+
+.capacity-row span{
+
+    color:#63736a;
+
+    font-weight:600;
+
+    margin-left:4px;
+}
+
+.chemistry-note{
+
+    margin-top:18px;
+
+    padding:14px 17px;
+
+    border:1px solid #cfe2d2;
+
+    background:#f3f9f4;
+
+    border-radius:14px;
+
+    color:#52665a;
+
+    font-size:10px;
+
+    line-height:1.5;
+}
+
+.chemistry-note strong{
+
+    color:var(--green);
+}
+
+.feature-row{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px;
+
+    margin-top:18px;
+}
+
+.feature-pill{
+
+    min-height:64px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    padding:10px;
+
+    border-radius:14px;
+
+    background:#f4f8f5;
+
+    color:#63736a;
+
+    text-align:center;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:.5px;
+
+    text-transform:uppercase;
+}
+
+.feature-pill b{
+
+    color:#67a64f;
+
+    font-size:16px;
+
+    line-height:1;
+}
+
+
+/* =========================================================
+   MANUFACTURING BANNER
+========================================================= */
+
+.engineered-banner{
+
+    margin-top:18px;
+
+    padding:25px 28px;
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #183d26,
+            #0f2d1a
+        );
+
+    color:#fff;
+
+    display:grid;
+
+    grid-template-columns:1.5fr .75fr .75fr;
+
+    gap:25px;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.engineered-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    border:1px solid rgba(145,201,74,.15);
+
+    border-radius:50%;
+
+    right:-100px;
+
+    top:-150px;
+}
+
+.engineered-banner .chemistry-kicker{
+
+    color:#a9d274;
+
+    margin-bottom:8px;
+}
+
+.engineered-banner h3{
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    max-width:460px;
+}
+
+.engineered-stat{
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.engineered-stat strong{
+
+    display:block;
+
+    color:#a8d85b;
+
+    font-size:24px;
+}
+
+.engineered-stat span{
+
+    display:block;
+
+    color:#9caf9f;
+
+    font-size:8px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-top:4px;
+}
+
+.chemistry-glance{
+
+    margin-top:28px;
+}
+
+.glance-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+}
+
+.glance-card{
+
+    padding:17px;
+
+    border:1px solid #dfe8e1;
+
+    border-radius:15px;
+
+    background:#fff;
+}
+
+.glance-card.active{
+
+    background:#183b25;
+
+    color:#fff;
+
+    border-color:#183b25;
+}
+
+.glance-card strong{
+
+    display:block;
+
+    font-size:12px;
+
+    margin-bottom:5px;
+}
+
+.glance-card span{
+
+    color:#68786e;
+
+    font-size:10px;
+}
+
+.glance-card.active span{
+
+    color:#c9d9ce;
+}
+
+
+/* =========================================================
+   PRODUCT SPOTLIGHT
+========================================================= */
+
+.product-spotlight{
+
+    padding:90px 6%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #143722,
+            #0c2817
+        );
+
+    color:#fff;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.product-spotlight::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:40px 40px;
+}
+
+.spotlight-top{
+
+    max-width:1180px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.spotlight-title{
+
+    font-size:clamp(30px,4vw,48px);
+
+    line-height:1.05;
+
+    letter-spacing:-1.5px;
+
+    max-width:720px;
+}
+
+.spotlight-subtitle{
+
+    color:#c5d3c9;
+
+    font-size:13px;
+
+    margin-top:8px;
+}
+
+.spotlight-tag{
+
+    float:right;
+
+    margin-top:10px;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    background:#a5d35b;
+
+    color:#163421;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:.5px;
+}
+
+.spotlight-main{
+
+    clear:both;
+
+    margin-top:22px;
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:25px;
+
+    align-items:stretch;
+}
+
+.spotlight-image{
+
+    min-height:300px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:#183e27;
+
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.spotlight-image img{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:300px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.spotlight-placeholder{
+
+    width:100%;
+
+    min-height:300px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#aebdb2;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+.spotlight-specs{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+    align-content:start;
+}
+
+.spotlight-spec{
+
+    padding:15px 10px;
+
+    border-radius:13px;
+
+    background:#173c26;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    text-align:center;
+}
+
+.spotlight-spec strong{
+
+    display:block;
+
+    color:#b5dc68;
+
+    font-size:15px;
+}
+
+.spotlight-spec span{
+
+    display:block;
+
+    color:#aab9ae;
+
+    font-size:7px;
+
+    letter-spacing:1px;
+
+    font-weight:800;
+
+    margin-top:5px;
+
+    text-transform:uppercase;
+}
+
+.spotlight-features{
+
+    grid-column:1/-1;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:10px;
+
+    margin-top:5px;
+}
+
+.spotlight-feature{
+
+    padding:14px;
+
+    border-radius:13px;
+
+    background:#173c26;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    color:#d5dfd8;
+
+    text-align:center;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+}
+
+.spotlight-feature::before{
+
+    content:"✓";
+
+    color:#a9df35;
+
+    margin-right:6px;
+}
+
+.featured-battery{
+
+    grid-column:1/-1;
+
+    display:grid;
+
+    grid-template-columns:180px 1fr;
+
+    gap:20px;
+
+    align-items:center;
+
+    padding-top:20px;
+
+    margin-top:5px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+.featured-image{
+
+    height:145px;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    background:#173c26;
+}
+
+.featured-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.featured-image .spotlight-placeholder{
+
+    min-height:145px;
+}
+
+.featured-copy .chemistry-kicker{
+
+    margin-bottom:7px;
+}
+
+.featured-copy h3{
+
+    font-size:19px;
+
+    margin-bottom:8px;
+}
+
+.featured-copy p{
+
+    color:#b9c5bd;
+
+    font-size:11px;
+
+    line-height:1.65;
+
+    max-width:650px;
+}
+
+.featured-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    margin-top:10px;
+}
+
+.featured-tags span{
+
+    padding:6px 10px;
+
+    border:1px solid rgba(169,223,53,.35);
+
+    border-radius:30px;
+
+    color:#b4df47;
+
+    font-size:8px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+}
+
+
+/* =========================================================
+   APPLICATIONS
+========================================================= */
+
+.applications{
+
+    padding:105px 6%;
+
+    background:#eaf3ec;
+}
+
+.application-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+}
+
+.application-box{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    border:1px solid #dce7dd;
+
+    padding:32px;
+
+    box-shadow:0 12px 35px rgba(34,70,43,.04);
+}
+
+.application-box h3{
+
+    font-size:23px;
+
+    margin-bottom:20px;
+}
+
+.list{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+}
+
+.list div{
+
+    padding:13px;
+
+    background:#f4f8f4;
+
+    border-radius:10px;
+
+    font-size:12px;
+
+    color:#607066;
+}
+
+.list div::before{
+
+    content:"✓";
+
+    color:var(--green);
+
+    margin-right:8px;
+
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   MANUFACTURING
+========================================================= */
+
+.manufacturing{
+
+    padding:105px 6%;
+
+    background:#f7faf8;
+}
+
+.manufacturing-grid{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:20px;
+}
+
+.manufacturing-box{
+
+    background:#fff;
+
+    border:1px solid #dfe8e0;
+
+    border-radius:25px;
+
+    padding:34px;
+}
+
+.manufacturing-box h3{
+
+    font-size:24px;
+
+    margin-bottom:18px;
+}
+
+.manufacturing-box p{
+
+    color:#748078;
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    margin-bottom:22px;
+}
+
+.manufacturing-steps{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+}
+
+.manufacturing-step{
+
+    padding:16px;
+
+    border-radius:14px;
+
+    background:#f4f8f4;
+
+    border:1px solid #e5ece6;
+}
+
+.manufacturing-step strong{
+
+    display:block;
+
+    color:var(--green);
+
+    font-size:11px;
+
+    margin-bottom:7px;
+
+    letter-spacing:1px;
+}
+
+.manufacturing-step span{
+
+    color:#5f6f64;
+
+    font-size:12px;
+
+    line-height:1.5;
+}
+
+.custom-battery{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #245f37,
+            #123b22
+        );
+
+    color:#fff;
+}
+
+.custom-battery p{
+
+    color:#c7d5ca;
+}
+
+.custom-battery .custom-list{
+
+    display:grid;
+
+    gap:10px;
+}
+
+.custom-battery .custom-list div{
+
+    padding:12px 14px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:10px;
+
+    font-size:12px;
+}
+
+.custom-battery .custom-list div::before{
+
+    content:"✓";
+
+    margin-right:8px;
+
+    color:#b9d9c0;
+
+    font-weight:bold;
+}
+
+.manufacturing-enquiry{
+
+    margin-bottom:25px;
+}
+
+
+/* =========================================================
+   WHY ZYNGEN
+========================================================= */
+
+.why{
+
+    background:#fff;
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:17px;
+}
+
+.why-card{
+
+    padding:27px;
+
+    background:#f8faf8;
+
+    border:1px solid #e1e8e2;
+
+    border-radius:22px;
+
+    transition:.25s ease;
+}
+
+.why-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(30,65,39,.08);
+}
+
+.why-card strong{
+
+    color:#719078;
+
+    font-size:11px;
+}
+
+.why-card h3{
+
+    font-size:18px;
+
+    margin:18px 0 10px;
+}
+
+.why-card p{
+
+    color:#748078;
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+
+    padding:100px 6%;
+
+    text-align:center;
+
+    color:#fff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #245f37,
+            #102f1c
+        );
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    left:-220px;
+
+    top:-250px;
+}
+
+.cta-inner{
+
+    max-width:750px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.cta h2{
+
+    font-size:48px;
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+    margin-bottom:18px;
+}
+
+.cta p{
+
+    color:#c2d0c5;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.cta .btn{
+
+    background:#fff;
+
+    color:var(--green);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    padding:42px 6%;
+
+    text-align:center;
+
+    background:#102017;
+
+    color:#aebbb0;
+
+    font-size:12px;
+}
+
+.footer-logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:12px;
+}
+
+.footer-logo img{
+
+    width:58px;
+
+    height:58px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:0 auto 12px;
+}
+
+.footer-company{
+
+    color:#fff;
+
+    font-size:21px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+.footer-logo span{
+
+    color:#6e9776;
+}
+
+.footer-contact{
+
+    margin-top:10px;
+
+    color:#89988e;
+}
+
+
+/* =========================================================
+   CHATBOT
+========================================================= */
+
+.zy-chat-launcher{
+
+    position:fixed;
+
+    right:24px;
+
+    bottom:24px;
+
+    width:62px;
+
+    height:62px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #327849,
+            #123b22
+        );
+
+    color:#fff;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 35px rgba(20,55,30,.28);
+
+    z-index:2000;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s ease;
+}
+
+.zy-chat-launcher:hover{
+
+    transform:translateY(-4px) scale(1.03);
+}
+
+.zy-chat-launcher .chat-dot{
+
+    position:absolute;
+
+    right:2px;
+
+    top:2px;
+
+    width:13px;
+
+    height:13px;
+
+    background:#9bd455;
+
+    border:2px solid #fff;
+
+    border-radius:50%;
+}
+
+.zy-chat-box{
+
+    position:fixed;
+
+    right:24px;
+
+    bottom:98px;
+
+    width:360px;
+
+    max-width:calc(100vw - 30px);
+
+    height:540px;
+
+    background:#fff;
+
+    border:1px solid #dce7de;
+
+    border-radius:24px;
+
+    box-shadow:0 25px 70px rgba(25,55,34,.22);
+
+    overflow:hidden;
+
+    z-index:1999;
+
+    display:none;
+
+    flex-direction:column;
+}
+
+.zy-chat-box.open{
+
+    display:flex;
+
+    animation:zyChatIn .22s ease;
+}
+
+@keyframes zyChatIn{
+
+    from{
+        opacity:0;
+        transform:translateY(12px) scale(.98);
+    }
+
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.zy-chat-head{
+
+    padding:18px 18px 16px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #286a3e,
+            #123b22
+        );
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.zy-chat-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+}
+
+.zy-chat-avatar{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:13px;
+
+    background:rgba(255,255,255,.14);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:20px;
+}
+
+.zy-chat-head strong{
+
+    display:block;
+
+    font-size:14px;
+}
+
+.zy-chat-head span{
+
+    display:block;
+
+    margin-top:3px;
+
+    font-size:10px;
+
+    color:#d4e2d7;
+}
+
+.zy-chat-close{
+
+    width:32px;
+
+    height:32px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.zy-chat-messages{
+
+    flex:1;
+
+    padding:16px;
+
+    overflow-y:auto;
+
+    background:#f6faf7;
+}
+
+.zy-msg{
+
+    display:flex;
+
+    margin-bottom:12px;
+}
+
+.zy-msg.bot{
+
+    justify-content:flex-start;
+}
+
+.zy-msg.user{
+
+    justify-content:flex-end;
+}
+
+.zy-bubble{
+
+    max-width:84%;
+
+    padding:11px 13px;
+
+    border-radius:15px;
+
+    font-size:12px;
+
+    line-height:1.55;
+}
+
+.zy-msg.bot .zy-bubble{
+
+    background:#fff;
+
+    border:1px solid #e0e9e2;
+
+    color:#425148;
+
+    border-bottom-left-radius:5px;
+}
+
+.zy-msg.user .zy-bubble{
+
+    background:#315f3c;
+
+    color:#fff;
+
+    border-bottom-right-radius:5px;
+}
+
+.zy-chat-options{
+
+    padding:10px 12px 5px;
+
+    display:flex;
+
+    gap:7px;
+
+    flex-wrap:wrap;
+
+    background:#fff;
+
+    border-top:1px solid #edf1ed;
+}
+
+.zy-option{
+
+    border:1px solid #cfe0d2;
+
+    background:#f5faf5;
+
+    color:#315f3c;
+
+    padding:8px 10px;
+
+    border-radius:20px;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+.zy-option:hover{
+
+    background:#e8f2e9;
+}
+
+.zy-chat-input{
+
+    display:flex;
+
+    gap:8px;
+
+    padding:11px 12px 13px;
+
+    background:#fff;
+}
+
+.zy-chat-input input{
+
+    flex:1;
+
+    min-width:0;
+
+    border:1px solid #d7e2d9;
+
+    border-radius:22px;
+
+    padding:11px 13px;
+
+    outline:none;
+
+    font-size:12px;
+}
+
+.zy-chat-input input:focus{
+
+    border-color:#6c9b76;
+}
+
+.zy-chat-send{
+
+    width:42px;
+
+    height:42px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:#315f3c;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:17px;
+}
+
+.zy-wa-link{
+
+    display:inline-flex;
+
+    margin-top:8px;
+
+    padding:8px 11px;
+
+    border-radius:18px;
+
+    background:#315f3c;
+
+    color:#fff !important;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .hero-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+
+    .battery-visual{
+
+        min-height:430px;
+    }
+
+    .product-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .strip-inner{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .nav{
+
+        display:none;
+    }
+
+    header{
+
+        padding:0 5%;
+    }
+
+    .hero{
+
+        padding:55px 5%;
+    }
+
+    .hero h1{
+
+        font-size:48px;
+
+        letter-spacing:-2.5px;
+    }
+
+    .hero p{
+
+        font-size:15px;
+    }
+
+    .battery-visual{
+
+        min-height:370px;
+
+        transform:scale(.82);
+    }
+
+    .energy-card{
+
+        transform:scale(.9);
+    }
+
+    .energy-one{
+
+        right:-5px;
+    }
+
+    .energy-two{
+
+        left:-5px;
+    }
+
+    .section-head{
+
+        display:block;
+    }
+
+    .title{
+
+        font-size:38px;
+
+        margin-bottom:20px;
+    }
+
+    .product-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .application-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .list{
+
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .manufacturing-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .manufacturing-steps{
+
+        grid-template-columns:1fr;
+    }
+
+    .strip-inner{
+
+        grid-template-columns:1fr;
+    }
+
+    .strip-item{
+
+        border-right:0;
+
+        border-bottom:1px solid #e7ece7;
+
+        padding:15px 0;
+    }
+
+    .strip-item:last-child{
+
+        border-bottom:0;
+    }
+
+    .cta h2{
+
+        font-size:38px;
+    }
+
+    .chemistry-grid,
+    .glance-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .feature-row,
+    .spotlight-features{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .engineered-banner{
+
+        grid-template-columns:1fr;
+
+        text-align:left;
+    }
+
+    .engineered-stat{
+
+        text-align:left;
+    }
+
+    .spotlight-tag{
+
+        float:none;
+
+        display:inline-block;
+
+        margin:15px 0 0;
+    }
+
+    .spotlight-main{
+
+        grid-template-columns:1fr;
+    }
+
+    .spotlight-specs{
+
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+    .featured-battery{
+
+        grid-template-columns:1fr;
+    }
+
+    .zy-chat-box{
+
+        right:12px;
+
+        bottom:86px;
+
+        width:calc(100vw - 24px);
+
+        height:min(560px,calc(100vh - 105px));
+    }
+
+    .zy-chat-launcher{
+
+        right:16px;
+
+        bottom:16px;
+
+        width:58px;
+
+        height:58px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     ZYNGEN PREMIUM LOADER
+========================================================= -->
+
+<div id="zyngen-loader">
+
+    <div class="loader-content">
+
+        <img
+            src="logo.png"
+            alt="ZynGen Enterprises"
+            class="loader-logo"
+        >
+
+        <div class="loader-company">
+
+            ZYNGEN
+
+            <span>
+                ENTERPRISES
+            </span>
+
+        </div>
+
+        <div class="loader-line"></div>
+
+    </div>
+
+</div>
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <a href="index.html" class="logo">
+
+        <img src="logo.png"
+             alt="ZynGen Enterprises">
+
+        <span class="brand-name">
+
+            <strong>ZYNGEN</strong>
+
+            <small>ENTERPRISES</small>
+
+        </span>
+
+    </a>
+
+
+    <nav class="nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="#products">Products</a>
+
+        <a href="#applications">Applications</a>
+
+        <a href="#manufacturing">Manufacturing</a>
+
+        <a href="#why">Why ZynGen</a>
+
+        <a href="#contact">Contact</a>
+
+        <a
+            href="https://wa.me/919363404447?text=Hello%20ZynGen,%20I%20have%20an%20EV%20or%20battery%20requirement."
+            target="_blank"
+            class="nav-enquiry"
+        >
+            Enquire ↗
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+
+<div>
+
+    <div class="hero-tag">
+
+        BATTERY & ELECTRIC VEHICLE MANUFACTURING
+
+    </div>
+
+
+    <h1>
+
+        Engineering power.<br>
+
+        <span>Moving tomorrow.</span>
+
+    </h1>
+
+
+    <p>
+
+        ZynGen Enterprises develops and manufactures
+        battery systems and electric mobility solutions
+        for practical, reliable and application-focused
+        performance.
+
+    </p>
+
+
+    <div class="buttons">
+
+        <a
+            href="#products"
+            class="btn btn-primary"
+        >
+            Explore Battery Solutions →
+        </a>
+
+
+        <a
+            href="https://wa.me/919363404447?text=Hello%20ZynGen,%20I%20need%20an%20EV%20or%20battery%20manufacturing%20solution."
+            target="_blank"
+            class="btn btn-secondary"
+        >
+            Manufacturing Enquiry ↗
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- BATTERY ANIMATION -->
+
+<div class="battery-visual">
+
+    <div class="energy-ring"></div>
+
+    <div class="energy-ring energy-ring-two"></div>
+
+    <div class="energy-pulse"></div>
+
+
+    <div class="battery">
+
+        <div class="battery-inner">
+
+            <div class="cell"></div>
+
+            <div class="cell"></div>
+
+            <div class="cell"></div>
+
+            <div class="cell"></div>
+
+            <div class="cell"></div>
+
+            <div class="charging-bolt">⚡</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="energy-card energy-one">
+
+        <strong>
+            Battery Manufacturing
+        </strong>
+
+        <span>
+            Design · Build · Test
+        </span>
+
+    </div>
+
+
+    <div class="energy-card energy-two">
+
+        <strong>
+            Electric Mobility
+        </strong>
+
+        <span>
+            EV products & solutions
+        </span>
+
+    </div>
+
+
+    <div class="manufacturing-label">
+
+        ENGINEERED FOR REAL-WORLD APPLICATIONS
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     INFORMATION STRIP
+========================================================= -->
+
+<section class="strip">
+
+<div class="strip-inner">
+
+    <div class="strip-item">
+
+        <strong>
+            48V / 60V / 72V
+        </strong>
+
+        <span>
+            Battery platform configurations
+        </span>
+
+    </div>
+
+
+    <div class="strip-item">
+
+        <strong>
+            LiFePO₄ · LFP · Li-ion
+        </strong>
+
+        <span>
+            Multiple lithium chemistries
+        </span>
+
+    </div>
+
+
+    <div class="strip-item">
+
+        <strong>
+            EV Manufacturing
+        </strong>
+
+        <span>
+            Battery systems & mobility solutions
+        </span>
+
+    </div>
+
+
+    <div class="strip-item">
+
+        <strong>
+            Custom Battery
+        </strong>
+
+        <span>
+            Voltage · capacity · form factor
+        </span>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
+
+<section class="products" id="products">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div>
+
+    <div class="eyebrow">
+        BATTERY PRODUCTS
+    </div>
+
+    <h2 class="title">
+
+        Energy systems<br>
+
+        <span>built for mobility.</span>
+
+    </h2>
+
+</div>
+
+
+<p class="description">
+
+    ZynGen develops battery solutions for EV,
+    solar, UPS and special applications with
+    configurations matched to the required
+    voltage, capacity and operating conditions.
+
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- 01 -->
+
+<div class="product-card">
+
+    <div class="product-number">
+        01 · EV BATTERY
+    </div>
+
+    <div class="product-image">
+
+        <img
+            src="ev-battery-system.png"
+            alt="EV Battery"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+            ADD EV BATTERY IMAGE
+        </div>
+
+    </div>
+
+    <h3>
+        EV Battery
+    </h3>
+
+    <p>
+        High-performance lithium battery systems
+        for electric vehicles, engineered for
+        dependable power, practical range and
+        mobility applications.
+    </p>
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20the%20EV%20Battery.%20Please%20share%20the%20technical%20details."
+        target="_blank"
+        class="battery-enquiry whatsapp"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+</div>
+
+
+<!-- 02 -->
+
+<div class="product-card">
+
+    <div class="product-number">
+        02 · SOLAR
+    </div>
+
+    <div class="product-image">
+
+        <img
+            src="solar.png"
+            alt="Solar Battery"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+            ADD SOLAR BATTERY IMAGE
+        </div>
+
+    </div>
+
+    <h3>
+        Solar Battery
+    </h3>
+
+    <p>
+        Energy storage solutions for solar
+        applications designed to store clean energy
+        and support reliable daily power requirements.
+    </p>
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20the%20Solar%20Battery.%20Please%20share%20the%20technical%20details."
+        target="_blank"
+        class="battery-enquiry whatsapp"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+</div>
+
+
+<!-- 03 -->
+
+<div class="product-card">
+
+    <div class="product-number">
+        03 · UPS
+    </div>
+
+    <div class="product-image">
+
+        <img
+            src="ups.png"
+            alt="UPS Battery"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+            ADD UPS BATTERY IMAGE
+        </div>
+
+    </div>
+
+    <h3>
+        UPS Battery
+    </h3>
+
+    <p>
+        Reliable battery systems for uninterrupted
+        power applications with performance suited
+        to backup requirements.
+    </p>
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20the%20UPS%20Battery.%20Please%20share%20the%20technical%20details."
+        target="_blank"
+        class="battery-enquiry whatsapp"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+</div>
+
+
+<!-- 04 -->
+
+<div class="product-card">
+
+    <div class="product-number">
+        04 · TWO WHEELER
+    </div>
+
+    <div class="product-image">
+
+        <img
+            src="two-wheeler.png"
+            alt="Two Wheeler Battery"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+            ADD TWO WHEELER IMAGE
+        </div>
+
+    </div>
+
+    <h3>
+        Two Wheeler Battery
+    </h3>
+
+    <p>
+        Battery packs for electric two-wheelers
+        designed around practical range, smooth
+        performance and application requirements.
+    </p>
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20the%20Two%20Wheeler%20Battery.%20Please%20share%20the%20technical%20details."
+        target="_blank"
+        class="battery-enquiry whatsapp"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+</div>
+
+
+<!-- 05 -->
+
+<div class="product-card">
+
+    <div class="product-number">
+        05 · THREE WHEELER
+    </div>
+
+    <div class="product-image">
+
+        <img
+            src="three-wheeler.png"
+            alt="Three Wheeler Battery"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+            ADD THREE WHEELER IMAGE
+        </div>
+
+    </div>
+
+    <h3>
+        Three Wheeler Battery
+    </h3>
+
+    <p>
+        Heavy-duty battery solutions for
+        three-wheelers built for dependable power
+        and demanding mobility operation.
+    </p>
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20the%20Three%20Wheeler%20Battery.%20Please%20share%20the%20technical%20details."
+        target="_blank"
+        class="battery-enquiry whatsapp"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+</div>
+
+
+<!-- 06 -->
+
+<div class="product-card">
+
+    <div class="product-number">
+        06 · FOUR WHEELER
+    </div>
+
+    <div class="product-image">
+
+        <img
+            src="car.png"
+            alt="Four Wheeler Battery"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+            ADD FOUR WHEELER IMAGE
+        </div>
+
+    </div>
+
+    <h3>
+        Four Wheeler Battery
+    </h3>
+
+    <p>
+        Higher-power battery platforms for
+        four-wheeler applications where performance,
+        range and robust operation are important.
+    </p>
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20the%20Four%20Wheeler%20Battery.%20Please%20share%20the%20technical%20details."
+        target="_blank"
+        class="battery-enquiry whatsapp"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+</div>
+
+
+<!-- 07 -->
+
+<div class="product-card">
+
+    <div class="product-number">
+        07 · CUSTOM BATTERY
+    </div>
+
+    <div class="product-image">
+
+        <img
+            src="customize-battery.png"
+            alt="Custom Battery Pack"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+            ADD CUSTOM BATTERY IMAGE
+        </div>
+
+    </div>
+
+    <h3>
+        Custom Battery Packs
+    </h3>
+
+    <p>
+        Application-specific battery packs configured
+        for voltage, capacity, form factor, BMS
+        integration and installation constraints.
+    </p>
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20need%20a%20Custom%20Battery%20Pack.%20Please%20discuss%20my%20requirement."
+        target="_blank"
+        class="battery-enquiry whatsapp"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+</div>
+
+
+<!-- 08 -->
+
+<div class="product-card">
+
+    <div class="product-number">
+        08 · CHEMISTRY
+    </div>
+
+    <div class="product-image">
+
+        <img
+            src="lifepo4.png"
+            alt="Lithium Battery Range"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+            ADD LITHIUM BATTERY IMAGE
+        </div>
+
+    </div>
+
+    <h3>
+        LiFePO₄ · LFP · Li-ion
+    </h3>
+
+    <p>
+        Battery platforms available in 48V, 60V
+        and 72V configurations with chemistry
+        and cell selection matched to the application.
+    </p>
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20LiFePO4%2C%20LFP%20or%20Li-ion%20battery%20systems."
+        target="_blank"
+        class="battery-enquiry whatsapp"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+</div>
+
+
+<!-- 09 -->
+
+<div class="product-card">
+
+    <div class="product-number">
+        09 · FEATURED
+    </div>
+
+    <div class="product-image">
+
+        <img
+            src="36v-10ah-li-ion.png"
+            alt="36V 10Ah Li-ion Battery"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+
+        <div
+            class="image-placeholder"
+            style="display:none;"
+        >
+            ADD 36V 10Ah BATTERY IMAGE
+        </div>
+
+    </div>
+
+    <h3>
+        36V 10Ah Li-ion Battery
+    </h3>
+
+    <p>
+        360Wh rechargeable Li-ion battery for
+        E-Bike and E-Scooter applications with
+        BMS protection and IP-65 water resistance.
+    </p>
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20the%2036V%2010Ah%20Li-ion%20Battery."
+        target="_blank"
+        class="battery-enquiry whatsapp"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     BATTERY CHEMISTRY
+========================================================= -->
+
+<section class="battery-details" id="battery-details">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div>
+
+    <div class="eyebrow">
+        BATTERY ENGINEERING
+    </div>
+
+    <h2 class="title">
+
+        Lithium battery<br>
+
+        <span>chemistry & configuration.</span>
+
+    </h2>
+
+</div>
+
+<p class="description">
+
+    Battery chemistry and cell selection can be
+    matched to vehicle requirements, energy storage,
+    operating conditions and duty cycles.
+
+</p>
+
+</div>
+
+
+<!-- LFP -->
+
+<div class="chemistry-section">
+
+    <div class="chemistry-kicker">
+        BATTERY PLATFORM
+    </div>
+
+    <h3 class="chemistry-title">
+
+        Lithium Ferro Phosphate
+
+        <span>
+            LFP Battery Packs · Cell 32140
+        </span>
+
+    </h3>
+
+    <p class="chemistry-intro">
+
+        High-capacity LFP battery packs across
+        48V / 60V / 72V configurations.
+
+    </p>
+
+
+    <div class="chemistry-grid">
+
+
+        <div class="chemistry-card">
+
+            <div class="chemistry-card-head">
+
+                <small>
+                    Configuration
+                </small>
+
+                <strong>
+                    48V
+                </strong>
+
+            </div>
+
+            <div class="capacity-head">
+                Capacity options
+            </div>
+
+            <div class="capacity-list">
+
+                <div class="capacity-row">
+                    15,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    30,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    45,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    60,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    75,000 <span>Ah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chemistry-card">
+
+            <div class="chemistry-card-head">
+
+                <small>
+                    Configuration
+                </small>
+
+                <strong>
+                    60V
+                </strong>
+
+            </div>
+
+            <div class="capacity-head">
+                Capacity options
+            </div>
+
+            <div class="capacity-list">
+
+                <div class="capacity-row">
+                    15,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    30,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    45,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    60,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    75,000 <span>Ah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chemistry-card">
+
+            <div class="chemistry-card-head">
+
+                <small>
+                    Configuration
+                </small>
+
+                <strong>
+                    72V
+                </strong>
+
+            </div>
+
+            <div class="capacity-head">
+                Capacity options
+            </div>
+
+            <div class="capacity-list">
+
+                <div class="capacity-row">
+                    15,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    30,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    45,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    60,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    75,000 <span>Ah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="chemistry-note">
+
+        <strong>
+            Cell platform:
+        </strong>
+
+        LFP · Cell 32140
+        &nbsp; | &nbsp;
+        Designed for high discharge and rugged-duty applications.
+
+    </div>
+
+
+    <div class="feature-row">
+
+        <div class="feature-pill">
+            <b>✓</b>
+            High Safety
+        </div>
+
+        <div class="feature-pill">
+            <b>⚡</b>
+            Fast Charging
+        </div>
+
+        <div class="feature-pill">
+            <b>♨</b>
+            Thermal Stable
+        </div>
+
+        <div class="feature-pill">
+            <b>◒</b>
+            Long Cycle Life
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- LiFePO4 -->
+
+<div class="chemistry-section">
+
+    <div class="chemistry-kicker">
+        BATTERY PLATFORM
+    </div>
+
+    <h3 class="chemistry-title">
+
+        Lithium Iron Phosphate
+
+        <span>
+            LiFePO₄ Battery Packs · Cell 32700
+        </span>
+
+    </h3>
+
+    <p class="chemistry-intro">
+
+        High-capacity LiFePO₄ battery packs across
+        48V / 60V / 72V configurations.
+
+    </p>
+
+
+    <div class="chemistry-grid">
+
+
+        <div class="chemistry-card">
+
+            <div class="chemistry-card-head">
+
+                <small>
+                    Configuration
+                </small>
+
+                <strong>
+                    48V
+                </strong>
+
+            </div>
+
+            <div class="capacity-head">
+                Capacity options
+            </div>
+
+            <div class="capacity-list">
+
+                <div class="capacity-row">
+                    18,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    30,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    36,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    42,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    48,000 <span>Ah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chemistry-card">
+
+            <div class="chemistry-card-head">
+
+                <small>
+                    Configuration
+                </small>
+
+                <strong>
+                    60V
+                </strong>
+
+            </div>
+
+            <div class="capacity-head">
+                Capacity options
+            </div>
+
+            <div class="capacity-list">
+
+                <div class="capacity-row">
+                    18,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    30,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    36,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    42,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    48,000 <span>Ah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chemistry-card">
+
+            <div class="chemistry-card-head">
+
+                <small>
+                    Configuration
+                </small>
+
+                <strong>
+                    72V
+                </strong>
+
+            </div>
+
+            <div class="capacity-head">
+                Capacity options
+            </div>
+
+            <div class="capacity-list">
+
+                <div class="capacity-row">
+                    18,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    30,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    36,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    42,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    48,000 <span>Ah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="chemistry-note">
+
+        <strong>
+            Cell platform:
+        </strong>
+
+        LiFePO₄ · Cell 32700
+        &nbsp; | &nbsp;
+        Extended cycle life and thermal stability.
+
+    </div>
+
+
+    <div class="engineered-banner">
+
+        <div>
+
+            <div class="chemistry-kicker">
+                ENGINEERED BATTERY
+            </div>
+
+            <h3>
+
+                LiFePO₄ technology for demanding
+                applications requiring durability,
+                stability and dependable energy storage.
+
+            </h3>
+
+        </div>
+
+
+        <div class="engineered-stat">
+
+            <strong>
+                2000+
+            </strong>
+
+            <span>
+                Charge cycles
+            </span>
+
+        </div>
+
+
+        <div class="engineered-stat">
+
+            <strong>
+                LFP
+            </strong>
+
+            <span>
+                Chemistry
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Li-ion -->
+
+<div class="chemistry-section">
+
+    <div class="chemistry-kicker">
+        BATTERY PLATFORM
+    </div>
+
+    <h3 class="chemistry-title">
+
+        Lithium-Ion
+
+        <span>
+            Battery Packs · Cell 18650
+        </span>
+
+    </h3>
+
+    <p class="chemistry-intro">
+
+        High-energy-density Li-ion battery packs
+        across 48V / 60V / 72V configurations.
+
+    </p>
+
+
+    <div class="chemistry-grid">
+
+
+        <div class="chemistry-card">
+
+            <div class="chemistry-card-head">
+
+                <small>
+                    Configuration
+                </small>
+
+                <strong>
+                    48V
+                </strong>
+
+            </div>
+
+            <div class="capacity-head">
+                Capacity options
+            </div>
+
+            <div class="capacity-list">
+
+                <div class="capacity-row">
+                    15,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    30,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    35,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    40,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    45,000 <span>Ah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chemistry-card">
+
+            <div class="chemistry-card-head">
+
+                <small>
+                    Configuration
+                </small>
+
+                <strong>
+                    60V
+                </strong>
+
+            </div>
+
+            <div class="capacity-head">
+                Capacity options
+            </div>
+
+            <div class="capacity-list">
+
+                <div class="capacity-row">
+                    15,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    30,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    35,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    40,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    45,000 <span>Ah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chemistry-card">
+
+            <div class="chemistry-card-head">
+
+                <small>
+                    Configuration
+                </small>
+
+                <strong>
+                    72V
+                </strong>
+
+            </div>
+
+            <div class="capacity-head">
+                Capacity options
+            </div>
+
+            <div class="capacity-list">
+
+                <div class="capacity-row">
+                    15,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    30,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    35,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    40,000 <span>Ah</span>
+                </div>
+
+                <div class="capacity-row">
+                    45,000 <span>Ah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="chemistry-note">
+
+        <strong>
+            Cell platform:
+        </strong>
+
+        Li-ion · Cell 18650
+        &nbsp; | &nbsp;
+        High energy density and compact form.
+
+    </div>
+
+
+    <div class="chemistry-glance">
+
+        <div class="chemistry-kicker">
+            BATTERY CHEMISTRIES
+        </div>
+
+        <div class="glance-grid">
+
+            <div class="glance-card">
+
+                <strong>
+                    LFP · Cell 32140
+                </strong>
+
+                <span>
+                    High discharge · Rugged duty
+                </span>
+
+            </div>
+
+
+            <div class="glance-card">
+
+                <strong>
+                    LiFePO₄ · Cell 32700
+                </strong>
+
+                <span>
+                    Cycle life · Thermal stability
+                </span>
+
+            </div>
+
+
+            <div class="glance-card active">
+
+                <strong>
+                    Li-ion · Cell 18650
+                </strong>
+
+                <span>
+                    High energy density · Compact
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PRODUCT SPOTLIGHT
+========================================================= -->
+
+<section class="product-spotlight" id="spotlight">
+
+<div class="spotlight-top">
+
+
+    <div class="chemistry-kicker">
+        PRODUCT SPOTLIGHT
+    </div>
+
+
+    <span class="spotlight-tag">
+        LI-ION · 18650
+    </span>
+
+
+    <h2 class="spotlight-title">
+
+        36V 10Ah 360Wh Rechargeable<br>
+        Li-ion Battery
+
+    </h2>
+
+
+    <p class="spotlight-subtitle">
+
+        For E-Bike / E-Scooter Applications
+
+    </p>
+
+
+    <div class="spotlight-main">
+
+
+        <div class="spotlight-image">
+
+            <img
+                src="36v-10ah-battery.jpeg"
+                alt="36V 10Ah 360Wh Rechargeable Li-ion Battery"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
+
+            <div
+                class="spotlight-placeholder"
+                style="display:none;"
+            >
+                ADD 36V 10Ah BATTERY IMAGE
+            </div>
+
+        </div>
+
+
+        <div class="spotlight-specs">
+
+
+            <div class="spotlight-spec">
+
+                <strong>36V</strong>
+
+                <span>
+                    Voltage
+                </span>
+
+            </div>
+
+
+            <div class="spotlight-spec">
+
+                <strong>10Ah</strong>
+
+                <span>
+                    Capacity
+                </span>
+
+            </div>
+
+
+            <div class="spotlight-spec">
+
+                <strong>360Wh</strong>
+
+                <span>
+                    Energy
+                </span>
+
+            </div>
+
+
+            <div class="spotlight-spec">
+
+                <strong>BMS</strong>
+
+                <span>
+                    Protected
+                </span>
+
+            </div>
+
+
+            <div class="spotlight-spec">
+
+                <strong>IP-65</strong>
+
+                <span>
+                    Water Res.
+                </span>
+
+            </div>
+
+
+            <div class="spotlight-features">
+
+
+                <div class="spotlight-feature">
+                    Fast Charging
+                </div>
+
+                <div class="spotlight-feature">
+                    Short-Circuit Safe
+                </div>
+
+                <div class="spotlight-feature">
+                    Temp. Protected
+                </div>
+
+                <div class="spotlight-feature">
+                    Eco Friendly
+                </div>
+
+
+            </div>
+
+
+            <div class="featured-battery">
+
+
+                <div class="featured-image">
+
+                    <img
+                        src="lifepo4.png"
+                        alt="12.8V 100Ah LiFePO4 Deep-Cycle Battery"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                    >
+
+                    <div
+                        class="spotlight-placeholder"
+                        style="display:none;"
+                    >
+                        ADD LiFePO4 IMAGE
+                    </div>
+
+                </div>
+
+
+                <div class="featured-copy">
+
+                    <div class="chemistry-kicker">
+                        ALSO FEATURED
+                    </div>
+
+                    <h3>
+                        12.8V 100Ah LiFePO₄ Deep-Cycle Battery
+                    </h3>
+
+                    <p>
+
+                        Built-in BMS protection with
+                        over-charge, over-discharge,
+                        short-circuit and over-temperature
+                        safeguards for solar and UPS
+                        deep-cycle applications.
+
+                    </p>
+
+
+                    <div class="featured-tags">
+
+                        <span>
+                            12.8V · 100Ah
+                        </span>
+
+                        <span>
+                            1280Wh
+                        </span>
+
+                        <span>
+                            Charge 14.6V
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20the%2036V%2010Ah%20360Wh%20Li-ion%20Battery."
+        target="_blank"
+        class="battery-enquiry"
+    >
+        Enquire on WhatsApp ↗
+    </a>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     APPLICATIONS
+========================================================= -->
+
+<section class="applications" id="applications">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div>
+
+    <div class="eyebrow">
+        EV & ENERGY APPLICATIONS
+    </div>
+
+    <h2 class="title">
+
+        Powering every<br>
+
+        <span>application.</span>
+
+    </h2>
+
+</div>
+
+
+<p class="description">
+
+    Battery systems can be configured according
+    to application, voltage, capacity, form factor
+    and installation requirements.
+
+</p>
+
+</div>
+
+
+<div class="application-grid">
+
+
+<div class="application-box">
+
+    <h3>
+        Electric Mobility
+    </h3>
+
+    <div class="list">
+
+        <div>
+            Electric Bicycles
+        </div>
+
+        <div>
+            Electric Two-Wheelers
+        </div>
+
+        <div>
+            Three-Wheelers
+        </div>
+
+        <div>
+            Four-Wheelers
+        </div>
+
+        <div>
+            Personal Mobility
+        </div>
+
+        <div>
+            Custom EV Projects
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="application-box">
+
+    <h3>
+        Energy & Equipment
+    </h3>
+
+    <div class="list">
+
+        <div>
+            Solar Storage
+        </div>
+
+        <div>
+            UPS Applications
+        </div>
+
+        <div>
+            Portable Power
+        </div>
+
+        <div>
+            Industrial Equipment
+        </div>
+
+        <div>
+            Custom Battery Packs
+        </div>
+
+        <div>
+            Special Applications
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     MANUFACTURING
+========================================================= -->
+
+<section class="manufacturing" id="manufacturing">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div>
+
+    <div class="eyebrow">
+        DESIGN · BUILD · TEST · DELIVER
+    </div>
+
+    <h2 class="title">
+
+        Battery <span>manufacturing.</span><br>
+
+        Built for reliability.
+
+    </h2>
+
+</div>
+
+
+<p class="description">
+
+    ZynGen provides an application-focused
+    battery manufacturing approach covering
+    design, assembly, BMS integration, testing
+    and delivery.
+
+</p>
+
+</div>
+
+
+<a
+    href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20am%20interested%20in%20Custom%20Battery%20Manufacturing."
+    target="_blank"
+    class="battery-enquiry manufacturing-enquiry"
+>
+    Discuss Manufacturing Requirement ↗
+</a>
+
+
+<div class="manufacturing-grid">
+
+
+<div class="manufacturing-box">
+
+    <h3>
+        Our Manufacturing Process
+    </h3>
+
+    <p>
+
+        From application-led engineering and
+        cell selection to precision assembly,
+        BMS integration, validation and dispatch,
+        every stage focuses on dependable battery
+        performance.
+
+    </p>
+
+
+    <div class="manufacturing-steps">
+
+
+        <div class="manufacturing-step">
+
+            <strong>
+                01 · DESIGN
+            </strong>
+
+            <span>
+                Application-led engineering,
+                cell selection and configuration.
+            </span>
+
+        </div>
+
+
+        <div class="manufacturing-step">
+
+            <strong>
+                02 · BUILD
+            </strong>
+
+            <span>
+                Precision assembly with BMS
+                integration and pack construction.
+            </span>
+
+        </div>
+
+
+        <div class="manufacturing-step">
+
+            <strong>
+                03 · TEST
+            </strong>
+
+            <span>
+                Safety, electrical, load and
+                performance validation.
+            </span>
+
+        </div>
+
+
+        <div class="manufacturing-step">
+
+            <strong>
+                04 · DELIVER
+            </strong>
+
+            <span>
+                Secure packaging and tracked
+                delivery to the customer.
+            </span>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="manufacturing-box custom-battery">
+
+    <h3>
+        Custom Battery Manufacturing
+    </h3>
+
+    <p>
+
+        Tell us your application and we can
+        configure the battery around the required
+        voltage, capacity, chemistry and form factor.
+
+    </p>
+
+
+    <div class="custom-list">
+
+        <div>
+            Custom voltage & capacity
+        </div>
+
+        <div>
+            LiFePO₄ / LFP / Li-ion chemistry
+        </div>
+
+        <div>
+            BMS protection & integration
+        </div>
+
+        <div>
+            Application-specific form factor
+        </div>
+
+        <div>
+            EV, solar, UPS & special applications
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY ZYNGEN
+========================================================= -->
+
+<section class="why" id="why">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div>
+
+    <div class="eyebrow">
+        WHY ZYNGEN ENTERPRISES
+    </div>
+
+    <h2 class="title">
+
+        Complete battery<br>
+
+        <span>capability.</span>
+
+    </h2>
+
+</div>
+
+
+<p class="description">
+
+    We approach battery systems as complete
+    application solutions rather than simply
+    supplying cells.
+
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why-card">
+
+    <strong>
+        01
+    </strong>
+
+    <h3>
+        Application Focus
+    </h3>
+
+    <p>
+
+        Solutions designed around the actual
+        vehicle, equipment or energy-storage
+        requirement.
+
+    </p>
+
+</div>
+
+
+<div class="why-card">
+
+    <strong>
+        02
+    </strong>
+
+    <h3>
+        Custom Configuration
+    </h3>
+
+    <p>
+
+        Battery configurations can be developed
+        according to voltage, capacity, chemistry
+        and form factor.
+
+    </p>
+
+</div>
+
+
+<div class="why-card">
+
+    <strong>
+        03
+    </strong>
+
+    <h3>
+        Engineering Support
+    </h3>
+
+    <p>
+
+        Engineering capability supports product
+        development, integration and application
+        requirements.
+
+    </p>
+
+</div>
+
+
+<div class="why-card">
+
+    <strong>
+        04
+    </strong>
+
+    <h3>
+        Manufacturing
+    </h3>
+
+    <p>
+
+        Precision-built battery packs with BMS
+        integration, testing and application-focused
+        quality control.
+
+    </p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta" id="contact">
+
+<div class="cta-inner">
+
+
+<div
+    class="eyebrow"
+    style="color:#a9c1ae;"
+>
+    HAVE A BATTERY OR EV REQUIREMENT?
+</div>
+
+
+<h2>
+
+    Let's build your<br>
+
+    next power solution.
+
+</h2>
+
+
+<p>
+
+    Tell us your voltage, capacity, application,
+    vehicle requirement or battery dimensions and
+    discuss a suitable manufacturing solution
+    with the ZynGen team.
+
+</p>
+
+
+<a
+    href="https://wa.me/919363404447?text=Hello%20ZynGen%2C%20I%20have%20a%20battery%20or%20EV%20manufacturing%20requirement."
+    target="_blank"
+    class="btn"
+>
+    Send Manufacturing Enquiry ↗
+</a>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="footer-logo">
+
+    <img
+        src="logo.png"
+        alt="ZynGen Enterprises Logo"
+    >
+
+    <div class="footer-company">
+        ZYNGEN ENTERPRISES
+    </div>
+
+</div>
+
+
+<div>
+
+    Battery Manufacturing · EV Batteries ·
+    Solar · UPS · Custom Battery Packs
+
+</div>
+
+
+<div class="footer-contact">
+
+    Salem, Tamil Nadu, India
+
+    &nbsp;·&nbsp;
+
+    +91 93634 04447
+
+    &nbsp;·&nbsp;
+
+    ev.zyngen@gmail.com
+
+</div>
+
+
+<br>
+
+
+© 2026 ZynGen Enterprises. All Rights Reserved.
+
+
+</footer>
+
+
+<!-- =========================================================
+     CHATBOT
+========================================================= -->
+
+<button
+    class="zy-chat-launcher"
+    id="zyChatLauncher"
+    aria-label="Open ZynGen battery assistant"
+>
+
+    💬
+
+    <span class="chat-dot"></span>
+
+</button>
+
+
+<div
+    class="zy-chat-box"
+    id="zyChatBox"
+    aria-hidden="true"
+>
+
+
+    <div class="zy-chat-head">
+
+        <div class="zy-chat-brand">
+
+            <div class="zy-chat-avatar">
+                🔋
+            </div>
+
+            <div>
+
+                <strong>
+                    ZynGen Battery Assistant
+                </strong>
+
+                <span>
+                    Battery products · EV · Manufacturing
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="zy-chat-close"
+            id="zyChatClose"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="zy-chat-messages"
+        id="zyChatMessages"
+    ></div>
+
+
+    <div
+        class="zy-chat-options"
+        id="zyChatOptions"
+    >
+
+        <button
+            class="zy-option"
+            data-q="products"
+        >
+            Battery Products
+        </button>
+
+        <button
+            class="zy-option"
+            data-q="custom"
+        >
+            Custom Battery
+        </button>
+
+        <button
+            class="zy-option"
+            data-q="manufacturing"
+        >
+            Manufacturing
+        </button>
+
+        <button
+            class="zy-option"
+            data-q="voltage"
+        >
+            48V / 60V / 72V
+        </button>
+
+        <button
+            class="zy-option"
+            data-q="whatsapp"
+        >
+            Talk to ZynGen
+        </button>
+
+    </div>
+
+
+    <form
+        class="zy-chat-input"
+        id="zyChatForm"
+    >
+
+        <input
+            id="zyChatInput"
+            type="text"
+            placeholder="Ask about a battery..."
+            autocomplete="off"
+        >
+
+        <button
+            class="zy-chat-send"
+            type="submit"
+        >
+            ➤
+        </button>
+
+    </form>
+
+</div>
+
+
+<script>
+
+
+/* =========================================================
+   ZYNGEN LOADER
+========================================================= */
+
+window.addEventListener("load", function(){
+
+    const loader =
+        document.getElementById("zyngen-loader");
+
+    setTimeout(function(){
+
+        loader.classList.add("hide");
+
+    }, 1200);
+
+});
+
+
+/* =========================================================
+   ZYNGEN CHATBOT
+========================================================= */
+
+(function(){
+
+    const launcher =
+        document.getElementById('zyChatLauncher');
+
+    const box =
+        document.getElementById('zyChatBox');
+
+    const close =
+        document.getElementById('zyChatClose');
+
+    const messages =
+        document.getElementById('zyChatMessages');
+
+    const form =
+        document.getElementById('zyChatForm');
+
+    const input =
+        document.getElementById('zyChatInput');
+
+    const options =
+        document.getElementById('zyChatOptions');
+
+    const wa =
+        '919363404447';
+
+
+    function addMessage(
+        text,
+        type='bot',
+        html=false
+    ){
+
+        const row =
+            document.createElement('div');
+
+        row.className =
+            'zy-msg ' + type;
+
+
+        const bubble =
+            document.createElement('div');
+
+        bubble.className =
+            'zy-bubble';
+
+
+        if(html){
+
+            bubble.innerHTML = text;
+
+        }else{
+
+            bubble.textContent = text;
+
+        }
+
+
+        row.appendChild(bubble);
+
+        messages.appendChild(row);
+
+        messages.scrollTop =
+            messages.scrollHeight;
+
+    }
+
+
+    function waButton(message){
+
+        const url =
+            'https://wa.me/' +
+            wa +
+            '?text=' +
+            encodeURIComponent(message);
+
+
+        return (
+
+            '<a class="zy-wa-link" ' +
+
+            'target="_blank" ' +
+
+            'rel="noopener" ' +
+
+            'href="' +
+            url +
+            '">' +
+
+            'Open WhatsApp Enquiry ↗' +
+
+            '</a>'
+
+        );
+
+    }
+
+
+    function answer(raw){
+
+        const q =
+            raw.toLowerCase().trim();
+
+
+        if(!q){
+
+            return 'Please type your battery requirement, voltage, capacity, vehicle application or manufacturing requirement.';
+
+        }
+
+
+        if(
+            q.includes('whatsapp') ||
+            q.includes('contact') ||
+            q.includes('enquir')
+        ){
+
+            return (
+
+                'Sure. Our team can discuss your EV or battery requirement directly on WhatsApp.' +
+
+                waButton(
+
+                    'Hello ZynGen, I have an EV or battery requirement. Please assist me.'
+
+                )
+
+            );
+
+        }
+
+
+        if(
+            q.includes('manufactur') ||
+            q.includes('build') ||
+            q.includes('assembly')
+        ){
+
+            return (
+
+                'ZynGen provides battery manufacturing support from application-led design and cell selection through precision assembly, BMS integration, testing and delivery. Custom voltage, capacity and form-factor configurations are also supported.' +
+
+                waButton(
+
+                    'Hello ZynGen, I am interested in battery manufacturing and custom battery pack development.'
+
+                )
+
+            );
+
+        }
+
+
+        if(q.includes('custom')){
+
+            return (
+
+                'Custom battery packs can be configured around your application, voltage, capacity, chemistry, dimensions and installation requirement.' +
+
+                waButton(
+
+                    'Hello ZynGen, I need a custom battery pack. Please discuss my application, voltage, capacity and dimensions.'
+
+                )
+
+            );
+
+        }
+
+
+        if(
+            q.includes('48') ||
+            q.includes('60') ||
+            q.includes('72') ||
+            q.includes('voltage')
+        ){
+
+            return (
+
+                'ZynGen offers LFP, LiFePO₄ and Li-ion battery systems in 48V, 60V and 72V configurations. The correct configuration depends on vehicle, load, range and duty requirements.' +
+
+                waButton(
+
+                    'Hello ZynGen, I need help selecting a 48V / 60V / 72V battery system.'
+
+                )
+
+            );
+
+        }
+
+
+        if(q.includes('solar')){
+
+            return (
+
+                'ZynGen offers battery solutions for solar energy storage applications, including LiFePO₄ configurations.' +
+
+                waButton(
+
+                    'Hello ZynGen, I need a solar battery solution.'
+
+                )
+
+            );
+
+        }
+
+
+        if(q.includes('ups')){
+
+            return (
+
+                'ZynGen offers battery systems for UPS and backup-power applications.' +
+
+                waButton(
+
+                    'Hello ZynGen, I need a UPS battery solution.'
+
+                )
+
+            );
+
+        }
+
+
+        if(
+            q.includes('two wheeler') ||
+            q.includes('2 wheeler') ||
+            q.includes('scooter') ||
+            q.includes('e-bike')
+        ){
+
+            return (
+
+                'ZynGen offers battery solutions for electric two-wheelers, including e-bike and e-scooter applications. The catalogue features a 36V 10Ah 360Wh Li-ion battery.' +
+
+                waButton(
+
+                    'Hello ZynGen, I need a two-wheeler, e-bike or e-scooter battery.'
+
+                )
+
+            );
+
+        }
+
+
+        if(
+            q.includes('three wheeler') ||
+            q.includes('3 wheeler') ||
+            q.includes('auto')
+        ){
+
+            return (
+
+                'Three-wheeler battery systems can be configured for heavy-duty mobility requirements.' +
+
+                waButton(
+
+                    'Hello ZynGen, I need a three-wheeler battery solution.'
+
+                )
+
+            );
+
+        }
+
+
+        if(
+            q.includes('four wheeler') ||
+            q.includes('4 wheeler') ||
+            q.includes('car')
+        ){
+
+            return (
+
+                'Four-wheeler battery platforms can be configured for required performance, range and duty-cycle requirements.' +
+
+                waButton(
+
+                    'Hello ZynGen, I need a four-wheeler EV battery solution.'
+
+                )
+
+            );
+
+        }
+
+
+        if(
+            q.includes('lfp') ||
+            q.includes('32140')
+        ){
+
+            return (
+
+                'LFP battery packs use 32140 cells in the listed platform and are available across 48V, 60V and 72V configurations.' +
+
+                waButton(
+
+                    'Hello ZynGen, I am interested in LFP 32140 battery packs.'
+
+                )
+
+            );
+
+        }
+
+
+        if(
+            q.includes('lifepo') ||
+            q.includes('32700')
+        ){
+
+            return (
+
+                'LiFePO₄ battery packs use 32700 cells in the listed platform and are available across 48V, 60V and 72V configurations.' +
+
+                waButton(
+
+                    'Hello ZynGen, I am interested in LiFePO₄ 32700 battery packs.'
+
+                )
+
+            );
+
+        }
+
+
+        if(
+            q.includes('li-ion') ||
+            q.includes('li ion') ||
+            q.includes('18650')
+        ){
+
+            return (
+
+                'Li-ion battery packs use 18650 cells in the listed platform and are available across 48V, 60V and 72V configurations.' +
+
+                waButton(
+
+                    'Hello ZynGen, I am interested in Li-ion 18650 battery packs.'
+
+                )
+
+            );
+
+        }
+
+
+        if(
+            q.includes('product') ||
+            q.includes('battery')
+        ){
+
+            return (
+
+                'ZynGen offers EV, solar, UPS, two-wheeler, three-wheeler and four-wheeler batteries, along with LFP, LiFePO₄, Li-ion and custom battery packs.' +
+
+                waButton(
+
+                    'Hello ZynGen, please help me choose the right battery product.'
+
+                )
+
+            );
+
+        }
+
+
+        return (
+
+            'I can help with battery products, LFP, LiFePO₄, Li-ion, 48V / 60V / 72V systems, EV batteries, solar, UPS, two-wheeler, three-wheeler, four-wheeler and custom battery manufacturing.' +
+
+            waButton(
+
+                'Hello ZynGen, I need help with an EV or battery requirement.'
+
+            )
+
+        );
+
+    }
+
+
+    function openChat(){
+
+        box.classList.add('open');
+
+        box.setAttribute(
+            'aria-hidden',
+            'false'
+        );
+
+        input.focus();
+
+
+        if(!messages.children.length){
+
+            addMessage(
+
+                'Hello! I’m the ZynGen Battery Assistant. I can help you with EV batteries, battery chemistry, custom battery packs and manufacturing.'
+
+            );
+
+            addMessage(
+
+                'What are you looking for?'
+
+            );
+
+        }
+
+    }
+
+
+    launcher.addEventListener(
+        'click',
+        openChat
+    );
+
+
+    close.addEventListener(
+        'click',
+        function(){
+
+            box.classList.remove('open');
+
+            box.setAttribute(
+                'aria-hidden',
+                'true'
+            );
+
+        }
+    );
+
+
+    form.addEventListener(
+        'submit',
+        function(e){
+
+            e.preventDefault();
+
+
+            const value =
+                input.value.trim();
+
+
+            if(!value){
+
+                return;
+
+            }
+
+
+            addMessage(
+                value,
+                'user'
+            );
+
+
+            input.value = '';
+
+
+            setTimeout(
+                function(){
+
+                    addMessage(
+                        answer(value),
+                        'bot',
+                        true
+                    );
+
+                },
+                250
+            );
+
+        }
+    );
+
+
+    options.addEventListener(
+        'click',
+        function(e){
+
+            const btn =
+                e.target.closest(
+                    '.zy-option'
+                );
+
+
+            if(!btn){
+
+                return;
+
+            }
+
+
+            const value =
+                btn.getAttribute(
+                    'data-q'
+                );
+
+
+            addMessage(
+                btn.textContent,
+                'user'
+            );
+
+
+            setTimeout(
+                function(){
+
+                    addMessage(
+                        answer(value),
+                        'bot',
+                        true
+                    );
+
+                },
+                220
+            );
+
+        }
+    );
+
+})();
+
+</script>
+
+
+</body>
+</html>

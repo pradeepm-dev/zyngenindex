@@ -1,0 +1,4479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="ZynGen Enterprises – Electric Mobility, Agriculture Products and Engineering Design Solutions.">
+
+<title>ZynGen Enterprises | Engineering & Technology</title>
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Segoe UI,Arial,sans-serif;
+    color:#172238;
+    background:#ffffff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font:inherit;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+
+    --dark:#071226;
+    --dark2:#0c1932;
+
+    --blue:#2f6bff;
+    --cyan:#22c7e8;
+    --violet:#7b5cff;
+
+    --green:#3d8b5b;
+    --green-dark:#1f633c;
+
+    --orange:#ff874b;
+
+    --white:#ffffff;
+
+    --text:#172238;
+    --muted:#68758a;
+
+    --soft:#f5f7fa;
+    --line:#e5e9f0;
+
+    --shadow:0 25px 70px rgba(20,31,58,.12);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+    width:min(1160px,90%);
+    margin:auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+
+    height:76px;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    background:rgba(7,18,38,.96);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+
+.header-inner{
+
+    width:min(1240px,92%);
+
+    height:100%;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+.logo img{
+
+    width:46px;
+    height:54px;
+
+    object-fit:contain;
+}
+
+.logo-text strong{
+
+    display:block;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    letter-spacing:1.5px;
+}
+
+.logo-text span{
+
+    display:block;
+
+    margin-top:3px;
+
+    color:#91a3bf;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    font-weight:800;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:27px;
+}
+
+.nav a{
+
+    color:#c8d2e3;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.nav a:hover{
+
+    color:#ffffff;
+}
+
+.nav .enquire{
+
+    color:#ffffff;
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--violet)
+        );
+
+    box-shadow:
+        0 10px 28px rgba(47,107,255,.25);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-btn{
+
+    display:none;
+
+    width:42px;
+    height:42px;
+
+    border:1px solid #2b3952;
+
+    border-radius:12px;
+
+    background:#111d34;
+
+    color:#ffffff;
+
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+.mobile-nav{
+
+    display:none;
+
+    position:fixed;
+
+    top:76px;
+
+    left:0;
+    right:0;
+
+    z-index:999;
+
+    padding:12px 6%;
+
+    background:#0a1428;
+
+    border-top:1px solid #1e2c43;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+}
+
+.mobile-nav.active{
+
+    display:block;
+}
+
+.mobile-nav a{
+
+    display:block;
+
+    padding:14px 0;
+
+    color:#d7e0ef;
+
+    border-bottom:1px solid #1d2b42;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    color:#ffffff;
+
+    background:
+
+        radial-gradient(
+            circle at 5% 12%,
+            rgba(34,199,232,.18),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 91% 16%,
+            rgba(123,92,255,.20),
+            transparent 27%
+        ),
+
+        radial-gradient(
+            circle at 76% 100%,
+            rgba(61,139,91,.12),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #071226 0%,
+            #0b1730 52%,
+            #111b3b 100%
+        );
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.hero:before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.20;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:70px 70px;
+
+    mask-image:
+        linear-gradient(
+            to right,
+            black,
+            transparent 85%
+        );
+}
+
+
+/* =========================================================
+   HERO INNER
+========================================================= */
+
+.hero-inner{
+
+    width:min(1160px,90%);
+
+    min-height:
+        calc(100vh - 76px);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    gap:30px;
+
+    align-items:center;
+
+    padding:55px 0;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+/* =========================================================
+   HERO LEFT
+========================================================= */
+
+.hero-copy{
+
+    max-width:650px;
+}
+
+.kicker{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:8px 13px;
+
+    border-radius:20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    background:
+        rgba(255,255,255,.055);
+
+    color:#a9c9ef;
+
+    font-size:10px;
+
+    font-weight:850;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:20px;
+}
+
+.kicker i{
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--cyan);
+
+    box-shadow:
+        0 0 15px var(--cyan);
+}
+
+
+.hero h1{
+
+    font-size:
+        clamp(48px,5.2vw,70px);
+
+    line-height:.98;
+
+    letter-spacing:-3.5px;
+
+    margin-bottom:23px;
+}
+
+.hero h1 span{
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #4edcff,
+            #6e8cff 50%,
+            #b879ff
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+}
+
+
+.hero-lead{
+
+    color:#b7c3d7;
+
+    font-size:15px;
+
+    line-height:1.75;
+
+    max-width:610px;
+
+    margin-bottom:22px;
+}
+
+
+.hero-note{
+
+    border-left:
+        2px solid var(--cyan);
+
+    padding-left:14px;
+
+    color:#8797b2;
+
+    font-size:11px;
+
+    line-height:1.65;
+
+    max-width:550px;
+
+    margin-bottom:28px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.buttons{
+
+    display:flex;
+
+    gap:11px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:13px 21px;
+
+    border-radius:28px;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    transition:.25s;
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+}
+
+.primary{
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--violet)
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(47,107,255,.25);
+}
+
+.secondary{
+
+    color:#ffffff;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+}
+
+
+/* =========================================================
+   HERO RIGHT
+========================================================= */
+
+.hero-showcase{
+
+    height:520px;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.hero-showcase:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:410px;
+    height:410px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(47,107,255,.18),
+            rgba(123,92,255,.08) 42%,
+            transparent 70%
+        );
+
+    filter:blur(8px);
+
+    animation:
+        breathe 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ORBIT RINGS
+========================================================= */
+
+.orbit-ring{
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+
+        0 0 0 18px
+        rgba(255,255,255,.015),
+
+        inset 0 0 50px
+        rgba(47,107,255,.06);
+
+    animation:
+        orbitRotate 18s linear infinite;
+}
+
+.orbit-ring:before,
+.orbit-ring:after{
+
+    content:"";
+
+    position:absolute;
+
+    border-radius:50%;
+}
+
+.orbit-ring:before{
+
+    width:9px;
+    height:9px;
+
+    background:var(--cyan);
+
+    box-shadow:
+        0 0 18px var(--cyan);
+
+    top:42px;
+    left:42px;
+}
+
+.orbit-ring:after{
+
+    width:7px;
+    height:7px;
+
+    background:var(--violet);
+
+    box-shadow:
+        0 0 18px var(--violet);
+
+    right:52px;
+    bottom:45px;
+}
+
+
+.orbit-ring-two{
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    border:
+        1px dashed
+        rgba(255,255,255,.09);
+
+    animation:
+        orbitReverse 24s linear infinite;
+}
+
+
+/* =========================================================
+   DOMAIN STAGE
+========================================================= */
+
+.domain-stage{
+
+    position:relative;
+
+    width:340px;
+    height:420px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:5;
+}
+
+
+/* =========================================================
+   DOMAIN CARD
+========================================================= */
+
+.domain-card{
+
+    position:absolute;
+
+    width:300px;
+
+    min-height:385px;
+
+    padding:30px 28px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    color:#ffffff;
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(20,35,65,.98),
+            rgba(8,18,38,.98)
+        );
+
+    box-shadow:
+        0 35px 90px
+        rgba(0,0,0,.42);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+        scale(.70)
+        rotate(-8deg)
+        translateY(25px);
+
+    transition:
+
+        opacity .65s ease,
+
+        transform .9s
+        cubic-bezier(.16,1,.3,1),
+
+        visibility .65s;
+}
+
+.domain-card.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        scale(1)
+        rotate(0)
+        translateY(0);
+}
+
+.domain-card.zoom-out{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+        scale(.55)
+        rotate(8deg)
+        translateY(-25px);
+}
+
+
+/* =========================================================
+   CARD DECORATION
+========================================================= */
+
+.domain-card:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    right:-100px;
+    top:-100px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.16),
+            transparent 68%
+        );
+
+    pointer-events:none;
+}
+
+.domain-card:after{
+
+    content:"";
+
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    left:-80px;
+    bottom:-80px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(34,199,232,.12),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   DOMAIN IMAGE
+========================================================= */
+
+.domain-card-icon{
+
+    width:244px;
+    height:140px;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:23px;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.22);
+}
+
+.domain-card-icon img{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    object-position:center;
+}
+
+
+/* =========================================================
+   DOMAIN IMAGE BACKGROUNDS
+========================================================= */
+
+.domain-card.ev .domain-card-icon{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #168edb,
+            #356cff
+        );
+}
+
+.domain-card.agri .domain-card-icon{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #4f9b5d,
+            #1e673c
+        );
+}
+
+.domain-card.design .domain-card-icon{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #7c5bff,
+            #b05be9
+        );
+}
+
+
+/* =========================================================
+   DOMAIN LABEL
+========================================================= */
+
+.domain-label{
+
+    color:#8fa8ce;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:9px;
+}
+
+
+/* =========================================================
+   DOMAIN TITLE
+========================================================= */
+
+.domain-card h2{
+
+    font-size:29px;
+
+    line-height:1.05;
+
+    letter-spacing:-1.2px;
+
+    margin-bottom:14px;
+}
+
+
+/* =========================================================
+   DOMAIN DESCRIPTION
+========================================================= */
+
+.domain-card p{
+
+    color:#9eacc1;
+
+    font-size:11px;
+
+    line-height:1.75;
+
+    margin-bottom:22px;
+}
+
+
+/* =========================================================
+   DOMAIN LINK
+========================================================= */
+
+.domain-card-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#ffffff;
+
+    font-size:11px;
+
+    font-weight:850;
+
+    padding-bottom:5px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.25);
+
+    transition:.25s;
+}
+
+.domain-card-link:hover{
+
+    color:#5de1ff;
+}
+
+
+/* =========================================================
+   COUNTER
+========================================================= */
+
+.stage-counter{
+
+    position:absolute;
+
+    right:0;
+    top:0;
+
+    z-index:10;
+
+    padding:8px 11px;
+
+    border-radius:12px;
+
+    background:
+        rgba(8,18,38,.88);
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    backdrop-filter:blur(12px);
+
+    color:#8da0bc;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.domain-dots{
+
+    position:absolute;
+
+    bottom:5px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:9px;
+
+    z-index:20;
+}
+
+.domain-dot{
+
+    width:8px;
+    height:8px;
+
+    padding:0;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:#43506b;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.domain-dot.active{
+
+    width:28px;
+
+    border-radius:10px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--cyan),
+            var(--violet)
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(34,199,232,.35);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes orbitRotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes orbitReverse{
+
+    from{
+        transform:rotate(360deg);
+    }
+
+    to{
+        transform:rotate(0deg);
+    }
+}
+
+@keyframes breathe{
+
+    0%,
+    100%{
+        transform:scale(.92);
+        opacity:.65;
+    }
+
+    50%{
+        transform:scale(1.05);
+        opacity:1;
+    }
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+section{
+
+    scroll-margin-top:90px;
+}
+
+.section{
+
+    padding:95px 0;
+}
+
+.soft{
+
+    background:#f5f7fa;
+}
+
+.eyebrow{
+
+    color:var(--blue);
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1.9px;
+
+    margin-bottom:12px;
+}
+
+.title{
+
+    font-size:
+        clamp(37px,4vw,53px);
+
+    line-height:1.04;
+
+    letter-spacing:-2.5px;
+
+    margin-bottom:18px;
+}
+
+.section-intro{
+
+    color:var(--muted);
+
+    max-width:650px;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   VISION MISSION
+========================================================= */
+
+.vision-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-top:50px;
+}
+
+.info-card{
+
+    position:relative;
+
+    padding:35px;
+
+    background:#ffffff;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:24px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(30,45,75,.07);
+
+    overflow:hidden;
+
+    transition:.3s;
+}
+
+.info-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+}
+
+.info-number{
+
+    font-size:12px;
+
+    font-weight:900;
+
+    color:var(--blue);
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+}
+
+.info-card h3{
+
+    font-size:25px;
+
+    margin-bottom:14px;
+
+    letter-spacing:-.8px;
+}
+
+.info-card p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.info-card:after{
+
+    content:"";
+
+    position:absolute;
+
+    width:140px;
+    height:140px;
+
+    right:-70px;
+    bottom:-70px;
+
+    border-radius:50%;
+
+    background:
+        rgba(47,107,255,.06);
+}
+
+
+/* =========================================================
+   DOMAINS
+========================================================= */
+
+.domains-section{
+
+    background:#ffffff;
+}
+
+.domains-header{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    margin-bottom:42px;
+}
+
+.domains-header .section-intro{
+
+    max-width:470px;
+}
+
+
+.domain-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+}
+
+.domain-box{
+
+    position:relative;
+
+    padding:30px;
+
+    min-height:315px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        var(--line);
+
+    background:#ffffff;
+
+    transition:.35s;
+}
+
+.domain-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow);
+}
+
+.domain-box-image{
+
+    width:100%;
+
+    height:125px;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    margin-bottom:22px;
+
+    background:#f3f5f8;
+}
+
+.domain-box-image img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.domain-box small{
+
+    color:#75849a;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:1.7px;
+}
+
+.domain-box h3{
+
+    font-size:24px;
+
+    margin:8px 0 12px;
+
+    letter-spacing:-.8px;
+}
+
+.domain-box p{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+}
+
+.domain-box a{
+
+    color:var(--blue);
+
+    font-size:11px;
+
+    font-weight:850;
+}
+
+
+/* =========================================================
+   ABOUT US
+========================================================= */
+
+.about-section{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #f5f8fc,
+            #ffffff
+        );
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1.05fr;
+
+    gap:75px;
+
+    align-items:center;
+}
+
+
+/* =========================================================
+   PREMIUM ABOUT IMAGE
+========================================================= */
+
+.about-visual{
+
+    position:relative;
+
+    width:100%;
+
+    height:430px;
+
+    border-radius:28px;
+
+    background:#eef2f5;
+
+    padding:10px;
+
+    box-shadow:
+        0 25px 65px
+        rgba(20,31,58,.14);
+
+    overflow:visible;
+}
+
+
+/* IMAGE FRAME */
+
+.about-image-frame{
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:#ffffff;
+
+    position:relative;
+}
+
+
+/* IMAGE */
+
+.about-image-frame img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    transition:
+        transform .7s
+        cubic-bezier(.16,1,.3,1);
+}
+
+
+/* IMAGE HOVER */
+
+.about-visual:hover
+.about-image-frame img{
+
+    transform:scale(1.045);
+}
+
+
+/* IMAGE OVERLAY */
+
+.about-image-frame::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(7,18,38,.03),
+            rgba(7,18,38,.18)
+        );
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   FLOATING BRAND BADGE
+========================================================= */
+
+.about-badge{
+
+    position:absolute;
+
+    left:-18px;
+
+    bottom:28px;
+
+    z-index:5;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:13px 18px;
+
+    background:#ffffff;
+
+    border:1px solid #e5e9f0;
+
+    border-radius:14px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(20,31,58,.16);
+
+    min-width:225px;
+}
+
+
+/* BADGE DOT */
+
+.badge-dot{
+
+    width:11px;
+
+    height:11px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2f6bff,
+            #7b5cff
+        );
+
+    box-shadow:
+        0 0 0 5px rgba(47,107,255,.08);
+}
+
+
+/* BADGE TITLE */
+
+.about-badge strong{
+
+    display:block;
+
+    color:#172238;
+
+    font-size:12px;
+
+    font-weight:850;
+
+    letter-spacing:.2px;
+}
+
+
+/* BADGE SUBTITLE */
+
+.about-badge small{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:#78869a;
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:.6px;
+}
+
+
+/* =========================================================
+   DECORATIVE CORNER
+========================================================= */
+
+.about-visual::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+
+    height:90px;
+
+    right:-18px;
+
+    top:-18px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(47,107,255,.18);
+
+    z-index:-1;
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-content h2{
+
+    font-size:
+        clamp(35px,4vw,52px);
+
+    line-height:1.05;
+
+    letter-spacing:-2.2px;
+
+    margin-bottom:22px;
+}
+
+.about-content p{
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.85;
+
+    margin-bottom:17px;
+}
+
+
+/* =========================================================
+   ABOUT POINTS
+========================================================= */
+
+.about-points{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+.about-point{
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:#ffffff;
+
+    border:
+        1px solid
+        var(--line);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    transition:.25s;
+}
+
+.about-point:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#d4dcef;
+
+    box-shadow:
+        0 10px 25px
+        rgba(20,31,58,.07);
+}
+
+
+/* =========================================================
+   COMMITMENT
+========================================================= */
+
+.commitment-section{
+
+    background:#071226;
+
+    color:#ffffff;
+}
+
+.commitment-section .eyebrow{
+
+    color:#58dfff;
+}
+
+.commitment-section .title{
+
+    color:#ffffff;
+}
+
+.commitment-section .section-intro{
+
+    color:#93a3bd;
+}
+
+.commitment-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:16px;
+
+    margin-top:45px;
+}
+
+.commitment-card{
+
+    padding:28px 24px;
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    transition:.3s;
+}
+
+.commitment-card:hover{
+
+    transform:translateY(-6px);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.035)
+        );
+}
+
+.commitment-icon{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:
+        rgba(47,107,255,.15);
+
+    color:#65dfff;
+
+    font-size:18px;
+
+    margin-bottom:20px;
+}
+
+.commitment-card h3{
+
+    font-size:17px;
+
+    margin-bottom:10px;
+}
+
+.commitment-card p{
+
+    color:#8797b1;
+
+    font-size:11px;
+
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section{
+
+    background:#f5f7fa;
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
+    margin-top:45px;
+}
+
+.contact-card{
+
+    padding:28px;
+
+    background:#ffffff;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:22px;
+
+    transition:.3s;
+}
+
+.contact-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow);
+}
+
+.contact-icon{
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#edf3ff;
+
+    color:var(--blue);
+
+    font-size:19px;
+
+    margin-bottom:20px;
+}
+
+.contact-card h3{
+
+    font-size:16px;
+
+    margin-bottom:8px;
+}
+
+.contact-card p,
+.contact-card a{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+.contact-card a:hover{
+
+    color:var(--blue);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+
+    padding:90px 0;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(34,199,232,.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(123,92,255,.15),
+            transparent 30%
+        ),
+
+        #09162d;
+
+    color:#ffffff;
+}
+
+.cta-inner{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:35px;
+}
+
+.cta h2{
+
+    font-size:
+        clamp(34px,4vw,50px);
+
+    letter-spacing:-2px;
+
+    line-height:1.05;
+
+    margin-bottom:14px;
+}
+
+.cta p{
+
+    color:#93a4bd;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    max-width:620px;
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+}
+
+.cta-btn{
+
+    padding:13px 21px;
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    font-weight:850;
+}
+
+.cta-primary{
+
+    background:#ffffff;
+
+    color:#09162d;
+}
+
+.cta-secondary{
+
+    color:#ffffff;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    background:
+        rgba(255,255,255,.05);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    background:#050d1c;
+
+    color:#ffffff;
+
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.4fr 1fr 1fr 1fr;
+
+    gap:40px;
+
+    padding-bottom:45px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+.footer-brand{
+
+    max-width:300px;
+}
+
+.footer-brand .footer-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:18px;
+}
+
+.footer-logo img{
+
+    width:43px;
+    height:48px;
+
+    object-fit:contain;
+}
+
+.footer-logo strong{
+
+    display:block;
+
+    font-size:17px;
+
+    letter-spacing:1.5px;
+}
+
+.footer-logo span{
+
+    display:block;
+
+    color:#73839d;
+
+    font-size:7px;
+
+    letter-spacing:2.5px;
+
+    margin-top:3px;
+}
+
+.footer-brand p{
+
+    color:#71819b;
+
+    font-size:11px;
+
+    line-height:1.8;
+}
+
+.footer-column h4{
+
+    font-size:11px;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:17px;
+}
+
+.footer-column a{
+
+    display:block;
+
+    color:#71819b;
+
+    font-size:11px;
+
+    margin-bottom:11px;
+
+    transition:.2s;
+}
+
+.footer-column a:hover{
+
+    color:#ffffff;
+}
+
+.footer-bottom{
+
+    padding-top:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.footer-bottom p{
+
+    color:#58677f;
+
+    font-size:10px;
+}
+
+.footer-bottom span{
+
+    color:#58677f;
+
+    font-size:10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media(max-width:1000px){
+
+    .nav{
+
+        display:none;
+    }
+
+    .menu-btn{
+
+        display:block;
+    }
+
+
+    .hero-inner{
+
+        grid-template-columns:1fr;
+
+        padding-top:55px;
+
+        padding-bottom:65px;
+    }
+
+    .hero-copy{
+
+        max-width:760px;
+    }
+
+    .hero-showcase{
+
+        height:500px;
+    }
+
+
+    .domain-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+    }
+
+
+    .about-visual{
+
+        height:380px;
+
+        min-height:380px;
+    }
+
+
+    .commitment-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+
+    .footer-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .container{
+
+        width:90%;
+    }
+
+
+    header{
+
+        height:70px;
+    }
+
+
+    .mobile-nav{
+
+        top:70px;
+    }
+
+
+    .logo img{
+
+        width:40px;
+
+        height:48px;
+    }
+
+
+    .logo-text strong{
+
+        font-size:15px;
+    }
+
+
+    .hero-inner{
+
+        width:90%;
+
+        min-height:auto;
+
+        padding:65px 0 60px;
+    }
+
+
+    .hero h1{
+
+        font-size:44px;
+
+        letter-spacing:-2.5px;
+    }
+
+
+    .hero-lead{
+
+        font-size:13px;
+    }
+
+
+    .hero-note{
+
+        font-size:10px;
+    }
+
+
+    .hero-showcase{
+
+        height:475px;
+    }
+
+
+    .orbit-ring{
+
+        width:330px;
+
+        height:330px;
+    }
+
+
+    .orbit-ring-two{
+
+        width:270px;
+
+        height:270px;
+    }
+
+
+    .hero-showcase:before{
+
+        width:340px;
+
+        height:340px;
+    }
+
+
+    .domain-stage{
+
+        width:320px;
+
+        height:400px;
+    }
+
+
+    .domain-card{
+
+        width:285px;
+
+        min-height:370px;
+
+        padding:26px 24px;
+    }
+
+
+    .domain-card-icon{
+
+        width:237px;
+
+        height:112px;
+    }
+
+
+    .domain-card h2{
+
+        font-size:26px;
+    }
+
+
+    .section{
+
+        padding:75px 0;
+    }
+
+
+    .vision-grid{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .domains-header{
+
+        display:block;
+    }
+
+
+    .domains-header .section-intro{
+
+        margin-top:15px;
+    }
+
+
+    .domain-grid{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .domain-box{
+
+        min-height:auto;
+    }
+
+
+    /* =====================================================
+       ABOUT IMAGE MOBILE
+    ===================================================== */
+
+    .about-visual{
+
+        width:100%;
+
+        height:320px;
+
+        min-height:320px;
+
+        padding:7px;
+
+        border-radius:23px;
+    }
+
+
+    .about-image-frame{
+
+        border-radius:18px;
+    }
+
+
+    .about-badge{
+
+        left:15px;
+
+        bottom:18px;
+
+        min-width:210px;
+
+        padding:11px 14px;
+    }
+
+
+    .about-visual::before{
+
+        right:-8px;
+
+        top:-8px;
+
+        width:65px;
+
+        height:65px;
+
+        border-radius:15px;
+    }
+
+
+    .about-points{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .commitment-grid{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+    }
+
+
+    .cta{
+
+        padding:70px 0;
+    }
+
+
+    .cta-inner{
+
+        display:block;
+    }
+
+
+    .cta-buttons{
+
+        margin-top:25px;
+    }
+
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+
+
+    .footer-bottom{
+
+        display:block;
+    }
+
+
+    .footer-bottom span{
+
+        display:block;
+
+        margin-top:8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:400px){
+
+    .hero h1{
+
+        font-size:39px;
+    }
+
+
+    .domain-card{
+
+        width:270px;
+    }
+
+
+    .domain-card-icon{
+
+        width:222px;
+    }
+
+
+    .orbit-ring{
+
+        width:300px;
+
+        height:300px;
+    }
+
+
+    .orbit-ring-two{
+
+        width:245px;
+
+        height:245px;
+    }
+
+
+    .about-visual{
+
+        height:285px;
+
+        min-height:285px;
+    }
+
+
+    .about-badge{
+
+        left:12px;
+
+        bottom:15px;
+
+        min-width:195px;
+    }
+
+
+    .about-badge strong{
+
+        font-size:11px;
+    }
+
+
+    .about-badge small{
+
+        font-size:7px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        scroll-behavior:auto !important;
+
+        transition-duration:.01ms !important;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="#home" class="logo">
+
+            <img
+                src="logo.png"
+                alt="ZynGen Enterprises Logo"
+            >
+
+            <div class="logo-text">
+
+                <strong>ZYNGEN</strong>
+
+                <span>ENTERPRISES</span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#vision">
+                Vision & Mission
+            </a>
+
+            <a href="#domains">
+                Our Domains
+            </a>
+
+            <a href="#about">
+                About Us
+            </a>
+
+            <a href="#commitment">
+                Commitment
+            </a>
+
+            <a
+                href="#contact"
+                class="enquire"
+            >
+                Let's Talk ↗
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open Menu"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ======================================================
+     MOBILE NAV
+====================================================== -->
+
+<div
+    class="mobile-nav"
+    id="mobileNav"
+>
+
+    <a href="#home">
+        Home
+    </a>
+
+    <a href="#vision">
+        Vision & Mission
+    </a>
+
+    <a href="#domains">
+        Our Domains
+    </a>
+
+    <a href="#about">
+        About Us
+    </a>
+
+    <a href="#commitment">
+        Commitment
+    </a>
+
+    <a href="#contact">
+        Contact
+    </a>
+
+</div>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-inner">
+
+
+        <!-- HERO LEFT -->
+
+        <div class="hero-copy">
+
+            <div class="kicker">
+
+                <i></i>
+
+                ZYNGEN ENTERPRISES
+
+            </div>
+
+
+            <h1>
+
+                Engineering technology.
+
+                <br>
+
+                <span>
+                    Creating practical impact.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-lead">
+
+                ZynGen Enterprises is an engineering and
+                technology company focused on building
+                practical solutions across Electric Mobility,
+                Agriculture Products and Engineering Design.
+
+            </p>
+
+
+            <p class="hero-note">
+
+                From advanced battery technologies and
+                electric mobility to agriculture products and
+                precision mechanical design, we bring
+                engineering thinking into real-world
+                applications.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    href="#domains"
+                    class="btn primary"
+                >
+                    Explore Our Domains →
+                </a>
+
+
+                <a
+                    href="#about"
+                    class="btn secondary"
+                >
+                    About ZynGen
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO RIGHT -->
+
+        <div class="hero-showcase">
+
+            <div class="orbit-ring"></div>
+
+            <div class="orbit-ring-two"></div>
+
+
+            <div class="domain-stage">
+
+
+                <div class="stage-counter">
+
+                    <span id="domainNumber">
+                        01
+                    </span>
+
+                    / 03
+
+                </div>
+
+
+                <!-- EV CARD -->
+
+                <article
+                    class="domain-card ev active"
+                    data-index="0"
+                >
+
+                    <div class="domain-card-icon">
+
+                        <img
+                            src="ev.png"
+                            alt="Electric Mobility Solutions"
+                        >
+
+                    </div>
+
+
+                    <div class="domain-label">
+
+                        01 / ELECTRIC MOBILITY
+
+                    </div>
+
+
+                    <h2>
+                        EV Solutions
+                    </h2>
+
+
+                    <p>
+
+                        Electric vehicle systems,
+                        advanced battery technologies
+                        and customized mobility solutions
+                        developed for practical
+                        applications.
+
+                    </p>
+
+
+                    <a
+                        href="ev.html"
+                        target="_blank"
+                        class="domain-card-link"
+                    >
+
+                        Explore EV Solutions →
+
+                    </a>
+
+                </article>
+
+
+                <!-- AGRICULTURE CARD -->
+
+                <article
+                    class="domain-card agri"
+                    data-index="1"
+                >
+
+                    <div class="domain-card-icon">
+
+                        <img
+                            src="agri-icon.png"
+                            alt="Agriculture Products"
+                        >
+
+                    </div>
+
+
+                    <div class="domain-label">
+
+                        02 / AGRICULTURE
+
+                    </div>
+
+
+                    <h2>
+                        Agriculture Products
+                    </h2>
+
+
+                    <p>
+
+                        Agriculture and natural products
+                        with a focus on quality,
+                        usability and responsible
+                        everyday applications.
+
+                    </p>
+
+
+                    <a
+                        href="agri.html"
+                        target="_blank"
+                        class="domain-card-link"
+                    >
+
+                        Explore Agriculture →
+
+                    </a>
+
+                </article>
+
+
+                <!-- ENGINEERING CARD -->
+
+                <article
+                    class="domain-card design"
+                    data-index="2"
+                >
+
+                    <div class="domain-card-icon">
+
+                        <img
+                            src="engineering-icon.png"
+                            alt="Engineering Design Solutions"
+                        >
+
+                    </div>
+
+
+                    <div class="domain-label">
+
+                        03 / ENGINEERING
+
+                    </div>
+
+
+                    <h2>
+                        Design Solutions
+                    </h2>
+
+
+                    <p>
+
+                        Precision mechanical design
+                        services including 3D CAD
+                        modelling, 2D drawings,
+                        product development and
+                        engineering support.
+
+                    </p>
+
+
+                    <a
+                        href="service.html"
+                        target="_blank"
+                        class="domain-card-link"
+                    >
+
+                        Explore Design Solutions →
+
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <!-- DOTS -->
+
+            <div class="domain-dots">
+
+                <button
+                    class="domain-dot active"
+                    data-slide="0"
+                    aria-label="Show EV Solutions"
+                ></button>
+
+
+                <button
+                    class="domain-dot"
+                    data-slide="1"
+                    aria-label="Show Agriculture Products"
+                ></button>
+
+
+                <button
+                    class="domain-dot"
+                    data-slide="2"
+                    aria-label="Show Engineering Solutions"
+                ></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     VISION & MISSION
+====================================================== -->
+
+<section
+    class="section"
+    id="vision"
+>
+
+    <div class="container">
+
+        <div class="eyebrow">
+            VISION & MISSION
+        </div>
+
+
+        <h2 class="title">
+
+            Building technology<br>
+
+            with meaningful purpose.
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            We combine engineering knowledge,
+            technology and practical execution to
+            create solutions designed for real-world
+            requirements and long-term value.
+
+        </p>
+
+
+        <div class="vision-grid">
+
+
+            <!-- VISION -->
+
+            <div class="info-card">
+
+                <div class="info-number">
+                    01 / VISION
+                </div>
+
+
+                <h3>
+
+                    To build technology with global relevance.
+
+                </h3>
+
+
+                <p>
+
+                    Our vision is to develop a globally
+                    recognized engineering and technology
+                    company working across electric mobility,
+                    battery systems, agriculture solutions and
+                    advanced mechanical design for a
+                    sustainable future.
+
+                </p>
+
+            </div>
+
+
+            <!-- MISSION -->
+
+            <div class="info-card">
+
+                <div class="info-number">
+                    02 / MISSION
+                </div>
+
+
+                <h3>
+
+                    To turn engineering into meaningful solutions.
+
+                </h3>
+
+
+                <p>
+
+                    Our mission is to design and develop
+                    practical EV systems, advanced battery
+                    technologies, agriculture solutions and
+                    precision mechanical products that improve
+                    efficiency, sustainability and everyday
+                    quality of life.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     OUR DOMAINS
+====================================================== -->
+
+<section
+    class="section domains-section"
+    id="domains"
+>
+
+    <div class="container">
+
+
+        <div class="domains-header">
+
+            <div>
+
+                <div class="eyebrow">
+                    OUR DOMAINS
+                </div>
+
+
+                <h2 class="title">
+
+                    Three domains.<br>
+
+                    One engineering vision.
+
+                </h2>
+
+            </div>
+
+
+            <p class="section-intro">
+
+                ZynGen Enterprises brings together
+                technology, agriculture and engineering
+                expertise to develop practical solutions
+                for modern requirements.
+
+            </p>
+
+        </div>
+
+
+        <div class="domain-grid">
+
+
+            <!-- EV -->
+
+            <div class="domain-box">
+
+                <div class="domain-box-image">
+
+                    <img
+                        src="ev.png"
+                        alt="EV Solutions"
+                    >
+
+                </div>
+
+
+                <small>
+                    01 / ELECTRIC MOBILITY
+                </small>
+
+
+                <h3>
+                    EV Solutions
+                </h3>
+
+
+                <p>
+
+                    Lithium-ion and LiFePO4 battery
+                    systems, electric vehicles,
+                    e-cycles, solar batteries,
+                    UPS batteries and customized
+                    battery configurations.
+
+                </p>
+
+
+                <a
+                    href="ev.html"
+                    target="_blank"
+                >
+
+                    View EV Solutions →
+
+                </a>
+
+            </div>
+
+
+            <!-- AGRICULTURE -->
+
+            <div class="domain-box">
+
+                <div class="domain-box-image">
+
+                    <img
+                        src="agri-icon.png"
+                        alt="Agriculture Products"
+                    >
+
+                </div>
+
+
+                <small>
+                    02 / AGRICULTURE
+                </small>
+
+
+                <h3>
+                    Agriculture Products
+                </h3>
+
+
+                <p>
+
+                    Natural and agriculture products
+                    including cold-pressed oils,
+                    wood-pressed oils, honey, tea,
+                    idly podi and brown sugar.
+
+                </p>
+
+
+                <a
+                    href="agri.html"
+                    target="_blank"
+                >
+
+                    View Agriculture →
+
+                </a>
+
+            </div>
+
+
+            <!-- ENGINEERING -->
+
+            <div class="domain-box">
+
+                <div class="domain-box-image">
+
+                    <img
+                        src="engineering-icon.png"
+                        alt="Engineering Design Solutions"
+                    >
+
+                </div>
+
+
+                <small>
+                    03 / ENGINEERING
+                </small>
+
+
+                <h3>
+                    Design Solutions
+                </h3>
+
+
+                <p>
+
+                    3D CAD modelling, 2D engineering
+                    drawings, pipe routing, manufacturing
+                    design and product development
+                    support.
+
+                </p>
+
+
+                <a
+                    href="service.html"
+                    target="_blank"
+                >
+
+                    View Design Services →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     ABOUT US
+====================================================== -->
+
+<section
+    class="section about-section"
+    id="about"
+>
+
+    <div class="container">
+
+        <div class="about-grid">
+
+
+            <!-- =================================================
+                 PREMIUM RECTANGLE IMAGE
+            ================================================== -->
+
+            <div class="about-visual">
+
+                <div class="about-image-frame">
+
+                    <img
+                        src="engineering-about.jpg"
+                        alt="ZynGen Enterprises Engineering Solutions"
+                    >
+
+                </div>
+
+
+                <!-- FLOATING BADGE -->
+
+                <div class="about-badge">
+
+                    <span class="badge-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            ZynGen Enterprises
+                        </strong>
+
+                        <small>
+                            Engineering • Technology • Innovation
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ABOUT CONTENT
+            ================================================== -->
+
+            <div class="about-content">
+
+                <div class="eyebrow">
+                    ABOUT ZYNGEN
+                </div>
+
+
+                <h2>
+
+                    Engineering excellence
+                    for a sustainable future.
+
+                </h2>
+
+
+                <p>
+
+                    ZynGen Enterprises is built around a
+                    simple idea: engineering should create
+                    practical value.
+
+                </p>
+
+
+                <p>
+
+                    We combine engineering knowledge,
+                    product development and practical
+                    execution across electric mobility,
+                    advanced battery systems, agriculture
+                    solutions and precision mechanical
+                    design.
+
+                </p>
+
+
+                <p>
+
+                    Our approach connects emerging
+                    technologies with application-focused
+                    development to create dependable,
+                    useful and scalable solutions.
+
+                </p>
+
+
+                <div class="about-points">
+
+                    <div class="about-point">
+                        Engineering Excellence
+                    </div>
+
+
+                    <div class="about-point">
+                        Customer Satisfaction
+                    </div>
+
+
+                    <div class="about-point">
+                        Continuous Innovation
+                    </div>
+
+
+                    <div class="about-point">
+                        Global Growth
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     COMMITMENT
+====================================================== -->
+
+<section
+    class="section commitment-section"
+    id="commitment"
+>
+
+    <div class="container">
+
+        <div class="eyebrow">
+            OUR COMMITMENT
+        </div>
+
+
+        <h2 class="title">
+
+            Principles that drive<br>
+
+            every solution we build.
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            Our commitment is focused on engineering
+            quality, customer value, innovation and
+            long-term growth.
+
+        </p>
+
+
+        <div class="commitment-grid">
+
+
+            <!-- 01 -->
+
+            <div class="commitment-card">
+
+                <div class="commitment-icon">
+                    ⚙
+                </div>
+
+
+                <h3>
+                    Engineering Excellence
+                </h3>
+
+
+                <p>
+
+                    Disciplined development, quality
+                    materials, rigorous testing and
+                    dependable execution.
+
+                </p>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="commitment-card">
+
+                <div class="commitment-icon">
+                    ✓
+                </div>
+
+
+                <h3>
+                    Customer Satisfaction
+                </h3>
+
+
+                <p>
+
+                    Understanding actual requirements
+                    and delivering reliable long-term
+                    value.
+
+                </p>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="commitment-card">
+
+                <div class="commitment-icon">
+                    ✦
+                </div>
+
+
+                <h3>
+                    Continuous Innovation
+                </h3>
+
+
+                <p>
+
+                    Continuously exploring better
+                    technologies, methods and ideas.
+
+                </p>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="commitment-card">
+
+                <div class="commitment-icon">
+                    ↗
+                </div>
+
+
+                <h3>
+                    Global Growth
+                </h3>
+
+
+                <p>
+
+                    Developing scalable solutions and
+                    building strong long-term partnerships.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+====================================================== -->
+
+<section
+    class="section contact-section"
+    id="contact"
+>
+
+    <div class="container">
+
+        <div class="eyebrow">
+            CONTACT US
+        </div>
+
+
+        <h2 class="title">
+
+            Let's build something<br>
+
+            meaningful together.
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            Have a project, product requirement or
+            business enquiry? Get in touch with
+            ZynGen Enterprises.
+
+        </p>
+
+
+        <div class="contact-grid">
+
+
+            <!-- PHONE -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ☎
+                </div>
+
+
+                <h3>
+                    Mobile
+                </h3>
+
+
+                <a href="tel:+919363404447">
+
+                    +91 93634 04447
+
+                </a>
+
+
+                <br><br>
+
+
+                <a
+                    href="https://wa.me/919363404447"
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    WhatsApp Enquiry →
+
+                </a>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+
+                <h3>
+                    Email
+                </h3>
+
+
+                <a href="mailto:info@zyngen.in">
+
+                    zyngen@gmail.com
+
+                </a>
+
+
+                <br><br>
+
+
+                <a href="mailto:info@zyngen.in">
+
+                    Send an Email →
+
+                </a>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    ⌖
+                </div>
+
+
+                <h3>
+                    Address
+                </h3>
+
+
+                <p>
+
+                    Salem, Tamil Nadu,
+                    India.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CTA
+====================================================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-inner">
+
+
+            <div>
+
+                <h2>
+
+                    Have an idea?<br>
+
+                    Let's make it real.
+
+                </h2>
+
+
+                <p>
+
+                    Connect with ZynGen Enterprises for
+                    EV solutions, agriculture products and
+                    engineering design services.
+
+                </p>
+
+            </div>
+
+
+            <div class="cta-buttons">
+
+                <a
+                    class="cta-btn cta-primary"
+                    href="https://wa.me/919363404447?text=Hello%20ZynGen%20Enterprises,%20I%20would%20like%20to%20make%20an%20enquiry."
+                    target="_blank"
+                    rel="noopener"
+                >
+
+                    WhatsApp Us
+
+                </a>
+
+
+                <a
+                    class="cta-btn cta-secondary"
+                    href="tel:+919363404447"
+                >
+
+                    Call Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+
+                    <img
+                        src="logo.png"
+                        alt="ZynGen Enterprises Logo"
+                    >
+
+
+                    <div>
+
+                        <strong>
+                            ZYNGEN
+                        </strong>
+
+
+                        <span>
+                            ENTERPRISES
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    Engineering technology and
+                    practical solutions across electric
+                    mobility, agriculture products and
+                    precision engineering services.
+
+                </p>
+
+            </div>
+
+
+            <!-- COMPANY -->
+
+            <div class="footer-column">
+
+                <h4>
+                    COMPANY
+                </h4>
+
+
+                <a href="#home">
+                    Home
+                </a>
+
+
+                <a href="#vision">
+                    Vision & Mission
+                </a>
+
+
+                <a href="#about">
+                    About Us
+                </a>
+
+
+                <a href="#commitment">
+                    Commitment
+                </a>
+
+            </div>
+
+
+            <!-- DOMAINS -->
+
+            <div class="footer-column">
+
+                <h4>
+                    DOMAINS
+                </h4>
+
+
+                <a
+                    href="ev.html"
+                    target="_blank"
+                >
+
+                    EV Solutions
+
+                </a>
+
+
+                <a
+                    href="agri.html"
+                    target="_blank"
+                >
+
+                    Agriculture Products
+
+                </a>
+
+
+                <a
+                    href="service.html"
+                    target="_blank"
+                >
+
+                    Design Solutions
+
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h4>
+                    CONTACT
+                </h4>
+
+
+                <a href="tel:+919363404447">
+
+                    +91 93634 04447
+
+                </a>
+
+
+                <a href="mailto:info@zyngen.in">
+
+                    zyngen@gmail.com
+
+                </a>
+
+
+                <a href="#contact">
+
+                    Tamil Nadu, India
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 ZynGen Enterprises.
+                All Rights Reserved.
+
+            </p>
+
+
+            <span>
+
+                Engineering Technology • Practical Impact
+
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const mobileNav =
+    document.getElementById("mobileNav");
+
+
+menuBtn.addEventListener(
+    "click",
+    function(){
+
+        mobileNav.classList.toggle("active");
+
+
+        if(
+            mobileNav.classList.contains("active")
+        ){
+
+            menuBtn.innerHTML = "✕";
+
+        }else{
+
+            menuBtn.innerHTML = "☰";
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CLOSE MOBILE MENU
+========================================================= */
+
+document
+    .querySelectorAll(".mobile-nav a")
+    .forEach(function(link){
+
+        link.addEventListener(
+            "click",
+            function(){
+
+                mobileNav.classList.remove("active");
+
+                menuBtn.innerHTML = "☰";
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   DOMAIN SLIDER
+========================================================= */
+
+const cards =
+    document.querySelectorAll(".domain-card");
+
+const dots =
+    document.querySelectorAll(".domain-dot");
+
+const number =
+    document.getElementById("domainNumber");
+
+
+let currentDomain = 0;
+
+let animationTimer = null;
+
+let transitionTimer = null;
+
+let isAnimating = false;
+
+
+const HOLD_TIME = 4200;
+
+const TRANSITION_TIME = 900;
+
+
+/* =========================================================
+   SHOW DOMAIN
+========================================================= */
+
+function showDomain(
+    index,
+    manual = false
+){
+
+    if(index < 0){
+
+        index =
+            cards.length - 1;
+
+    }
+
+
+    if(index >= cards.length){
+
+        index = 0;
+
+    }
+
+
+    if(
+        index === currentDomain &&
+        !manual
+    ){
+
+        return;
+
+    }
+
+
+    if(
+        isAnimating &&
+        !manual
+    ){
+
+        return;
+
+    }
+
+
+    isAnimating = true;
+
+
+    const oldCard =
+        cards[currentDomain];
+
+    const newCard =
+        cards[index];
+
+
+    oldCard.classList.remove(
+        "active"
+    );
+
+    oldCard.classList.add(
+        "zoom-out"
+    );
+
+
+    clearTimeout(
+        transitionTimer
+    );
+
+
+    transitionTimer =
+        setTimeout(
+            function(){
+
+
+                cards.forEach(
+                    function(card){
+
+                        card.classList.remove(
+                            "active"
+                        );
+
+                        card.classList.remove(
+                            "zoom-out"
+                        );
+
+                    }
+                );
+
+
+                newCard.classList.add(
+                    "active"
+                );
+
+
+                number.textContent =
+                    String(index + 1)
+                    .padStart(2,"0");
+
+
+                dots.forEach(
+                    function(dot){
+
+                        dot.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                dots[index].classList.add(
+                    "active"
+                );
+
+
+                currentDomain = index;
+
+
+                setTimeout(
+                    function(){
+
+                        isAnimating = false;
+
+                    },
+                    250
+                );
+
+
+            },
+            TRANSITION_TIME
+        );
+
+}
+
+
+/* =========================================================
+   NEXT DOMAIN
+========================================================= */
+
+function nextDomain(){
+
+    const next =
+        (currentDomain + 1)
+        % cards.length;
+
+
+    showDomain(next);
+
+}
+
+
+/* =========================================================
+   PREVIOUS DOMAIN
+========================================================= */
+
+function previousDomain(){
+
+    const previous =
+        (
+            currentDomain -
+            1 +
+            cards.length
+        )
+        % cards.length;
+
+
+    showDomain(
+        previous,
+        true
+    );
+
+}
+
+
+/* =========================================================
+   AUTO ANIMATION
+========================================================= */
+
+function startAnimation(){
+
+    clearInterval(
+        animationTimer
+    );
+
+
+    animationTimer =
+        setInterval(
+            function(){
+
+                nextDomain();
+
+            },
+            HOLD_TIME +
+            TRANSITION_TIME
+        );
+
+}
+
+
+/* =========================================================
+   DOT CLICK
+========================================================= */
+
+dots.forEach(
+    function(dot){
+
+        dot.addEventListener(
+            "click",
+            function(){
+
+                const index =
+                    Number(
+                        dot.dataset.slide
+                    );
+
+
+                clearInterval(
+                    animationTimer
+                );
+
+
+                showDomain(
+                    index,
+                    true
+                );
+
+
+                setTimeout(
+                    function(){
+
+                        startAnimation();
+
+                    },
+                    TRANSITION_TIME + 300
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   TOUCH SWIPE
+========================================================= */
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+const showcase =
+    document.querySelector(
+        ".hero-showcase"
+    );
+
+
+showcase.addEventListener(
+    "touchstart",
+    function(event){
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+showcase.addEventListener(
+    "touchend",
+    function(event){
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+
+        const distance =
+            touchEndX -
+            touchStartX;
+
+
+        if(
+            Math.abs(distance) < 50
+        ){
+
+            return;
+
+        }
+
+
+        clearInterval(
+            animationTimer
+        );
+
+
+        if(distance < 0){
+
+            nextDomain();
+
+        }else{
+
+            previousDomain();
+
+        }
+
+
+        setTimeout(
+            function(){
+
+                startAnimation();
+
+            },
+            TRANSITION_TIME + 300
+        );
+
+    },
+    {
+        passive:true
+    }
+);
+
+
+/* =========================================================
+   PAUSE WHEN TAB IS HIDDEN
+========================================================= */
+
+document.addEventListener(
+    "visibilitychange",
+    function(){
+
+        if(document.hidden){
+
+            clearInterval(
+                animationTimer
+            );
+
+        }else{
+
+            startAnimation();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   START
+========================================================= */
+
+startAnimation();
+
+
+</script>
+
+
+</body>
+
+</html>
